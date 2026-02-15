@@ -1,2 +1,3 @@
-# portfolio-marketing-services-website-for-blockchain-businesses
-Exported from Caffeine project: Portfolio &amp; marketing services website for blockchain businesses
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

@@ -1,0 +1,73 @@
+{
+  "kind": "build_request",
+  "title": "Update Signature Transformative Work links and add Fancy Studios card",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-23",
+      "text": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), update the “ROLLAPPS ON SOLANA — EthCC” card so its link is https://luma.com/jl85cn4t and enable the automatic link preview for this card using the same URL.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "1. ROLLAPPS ON SOLANA — EthCC\nThe view should show this - https://luma.com/jl85cn4t\n\nAnd the open link should be in open new tab - https://luma.com/jl85cn4t"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The “ROLLAPPS ON SOLANA — EthCC” card renders a LinkPreview using https://luma.com/jl85cn4t (i.e., showPreview is enabled and link is the luma.com URL).",
+        "Clicking the card’s “Open” action opens https://luma.com/jl85cn4t in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "text": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), update the “COINTELEGRAPH — Opinion Contributor” card so its link is https://cointelegraph.com/authors/shailey-singh and enable the automatic link preview for this card using the same URL.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "2. COINTELEGRAPH — Opinion Contributor\nHere this link should reflect - https://cointelegraph.com/authors/shailey-singh\n\nand open in new tab"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The “COINTELEGRAPH — Opinion Contributor” card renders a LinkPreview using https://cointelegraph.com/authors/shailey-singh.",
+        "Clicking the card’s “Open” action opens https://cointelegraph.com/authors/shailey-singh in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "text": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), add a new card adjacent to (i.e., next to, within the same grid as) the “COINTELEGRAPH — Opinion Contributor” card with: title “FANCY STUDIOS — Gaming Creativity”, italic category/subtitle “Blockchain gaming”, description “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”, and link https://fancy-studios.gitbook.io/whitepaper. Enable the automatic link preview for this new card using the same URL, and ensure its Open action opens in a new tab.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "3. Next to COintelegrpah introduce anothe rplacard with these details:\n\nFANCY STUDIOS — Gaming Creativity\nBlockchain gaming (italics)\nBuilt the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.\n\nDisplay the link and Open link in new tab - https://fancy-studios.gitbook.io/whitepaper"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new “FANCY STUDIOS — Gaming Creativity” card appears in the “Signature Transformative Work” grid next to the Cointelegraph card (i.e., nearby/adjacent in the grid layout).",
+        "The new card displays an italic category line exactly “Blockchain gaming”.",
+        "The new card description text matches exactly: “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”",
+        "The new card renders a LinkPreview using https://fancy-studios.gitbook.io/whitepaper.",
+        "Clicking the new card’s “Open” action opens https://fancy-studios.gitbook.io/whitepaper in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Keep the backend single-actor architecture unchanged (no new backend services)."
+  ],
+  "nonGoals": [
+    "Do not change any other card titles, categories, descriptions, ordering, or links beyond the three items specified.",
+    "Do not change global navigation, hero section, About, Contact, or other sections."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

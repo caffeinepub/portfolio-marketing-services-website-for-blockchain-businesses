@@ -1,0 +1,278 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 13,
+  "summary": "Personal portfolio site for Shailey Singh focused on Strategic GTM & Narrative for Web3, AI & Financial Infrastructure, highlighting selected work/signals, capabilities, strategic transformations, market notes, an \"Ask My Narrative Brain\" CTA, about, and contact info.",
+  "architectural_notes": [
+    "External links from “Open” should use target=\"_blank\" and rel=\"noopener noreferrer\".",
+    "Link preview display likely requires fetching/parsing Open Graph metadata server-side (or via a safe proxy) due to CORS limitations on client-side fetches.",
+    "Support an optional italic “category” line directly under each card title in the Signature Transformative Work (formerly Selected Signals) list.",
+    "Link previews/Open links should be supported per-entry (not just AVAIL/NEON), including AVAIL×ARCANA’s provided URL.",
+    "Hero section should ensure readable contrast: support background image dimming/overlay and appropriate text color (e.g., white) for legibility."
+  ],
+  "known_issues": [
+    "Hero text is currently hard to read because the background image is too dominant; needs dimming/contrast adjustments."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-multi-section-portfolio-marketing-services-website-that-showcases-the-user-s-work-and-clearly-offers-marketing-services-for-blockchain-businesses-with-navigation-to-key-sections-home-hero-value-proposition-services-portfolio-work-about-and-contact",
+      "title": "Create a responsive multi-section portfolio/marketing services website that showcases the user's work and clearly offers marketing services for blockchain businesses, with navigation to key sections: Home (hero + value proposition), Services, Portfolio/Work, About, and Contact.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-services-section-that-presents-a-clear-list-of-marketing-services-e-g-go-to-market-strategy-community-growth-content-partnerships-paid-campaigns-brand-positioning-with-short-descriptions-and-a-clear-call-to-action-leading-to-the-contact-section",
+      "title": "Implement a Services section that presents a clear list of marketing services (e.g., go-to-market strategy, community growth, content, partnerships, paid campaigns, brand positioning) with short descriptions and a clear call-to-action leading to the Contact section.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-portfolio-work-section-that-can-display-multiple-projects-case-studies-with-at-least-project-name-short-summary-role-services-provided-and-outcomes-metrics-fields-allow-placeholder-content-include-an-interaction-to-view-more-details-per-project-e-g-modal-or-expandable-panel",
+      "title": "Implement a Portfolio/Work section that can display multiple projects/case studies with at least: project name, short summary, role/services provided, and outcomes/metrics fields (allow placeholder content). Include an interaction to view more details per project (e.g., modal or expandable panel).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-about-section-describing-the-user-brand-and-a-lightweight-credibility-area-e-g-who-i-work-with-or-process-using-editable-copy-blocks",
+      "title": "Add an About section describing the user/brand and a lightweight credibility area (e.g., 'Who I work with' or 'Process') using editable copy blocks.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-section-with-a-form-name-email-company-project-message-that-performs-client-side-validation-and-provides-a-working-submission-path-via-a-mailto-link-including-the-form-content-and-a-copy-message-fallback",
+      "title": "Add a Contact section with a form (name, email, company/project, message) that performs client-side validation and provides a working submission path via a mailto link (including the form content) and a 'copy message' fallback.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-and-apply-a-cohesive-visual-theme-for-the-entire-site-colors-typography-spacing-and-component-styling-with-a-distinct-style-appropriate-for-blockchain-tech-marketing-avoid-blue-purple-as-primary-brand-colors",
+      "title": "Define and apply a cohesive visual theme for the entire site (colors, typography, spacing, and component styling) with a distinct style appropriate for blockchain/tech marketing. Avoid blue/purple as primary brand colors.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-brand-imagery-logo-mark-and-a-hero-background-illustration-to-the-project-under-frontend-public-assets-generated-and-use-them-on-the-site-logo-in-header-footer-hero-image-in-the-home-section",
+      "title": "Add generated static brand imagery (logo/mark and a hero background illustration) to the project under frontend/public/assets/generated and use them on the site (logo in header/footer; hero image in the Home section).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-existing-brand-agency-oriented-copy-with-the-provided-shailey-singh-personal-site-copy-including-updating-the-site-name-anywhere-it-appears-e-g-navbar-logo-text-footer-brand-name-meta-like-labels-inside-sections-from-the-current-blockchainmarketing-agency-language-to-shailey-singh-strategic-gtm-narrative-for-web3-ai-financial-infrastructure",
+      "title": "Replace all existing brand/agency-oriented copy with the provided Shailey Singh personal-site copy, including updating the site name anywhere it appears (e.g., navbar logo text, footer brand name, meta-like labels inside sections) from the current “BlockchainMarketing”/agency language to “Shailey Singh — Strategic GTM & Narrative for Web3, AI & Financial Infrastructure”.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-home-hero-section-copy-to-match-the-provided-home-content-including-the-headline-shailey-singh-the-subheadline-strategic-gtm-narrative-for-web3-ai-financial-infrastructure-the-paragraph-describing-the-intersection-of-protocol-design-ecosystem-gtm-capital-markets-narrative-and-the-two-ctas-labeled-view-strategic-work-and-ask-my-narrative-brain-ensure-the-ctas-scroll-to-their-respective-sections",
+      "title": "Update the Home/Hero section copy to match the provided HOME content, including the headline “Shailey Singh”, the subheadline “Strategic GTM & Narrative for Web3, AI & Financial Infrastructure”, the paragraph describing the intersection of protocol design/ecosystem/GTM/capital markets narrative, and the two CTAs labeled “View Strategic Work” and “Ask My Narrative Brain”. Ensure the CTAs scroll to their respective sections.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-new-content-sections-to-match-the-provided-structure-and-copy-while-keeping-the-existing-visual-style-1-selected-signals-section-containing-the-five-listed-entries-with-title-one-line-description-and-an-open-link-for-each-2-what-i-build-section-with-the-four-capability-items-and-their-descriptions-3-strategic-transformations-section-with-the-four-transformation-entries-and-their-descriptions-4-market-notes-section-containing-the-provided-intro-copy-topic-list-and-ctas-browse-market-notes-and-subscribe-optional-5-ask-my-narrative-brain-section-containing-the-provided-intro-copy-example-prompts-list-and-cta-open-the-assistant",
+      "title": "Implement new content sections to match the provided structure and copy, while keeping the existing visual style: (1) “Selected Signals” section containing the five listed entries with title, one-line description, and an “Open” link for each; (2) “What I Build” section with the four capability items and their descriptions; (3) “Strategic Transformations” section with the four transformation entries and their descriptions; (4) “Market Notes” section containing the provided intro copy, topic list, and CTAs “Browse Market Notes” and “Subscribe (optional)”; (5) “Ask My Narrative Brain” section containing the provided intro copy, example prompts list, and CTA “Open the assistant”.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-navigation-desktop-mobile-and-footer-quick-links-to-reflect-the-new-site-structure-and-section-names-ensuring-smooth-scrolling-continues-to-work-for-all-links-keep-contact-as-a-destination-section",
+      "title": "Update the navigation (desktop + mobile) and footer quick links to reflect the new site structure and section names, ensuring smooth scrolling continues to work for all links. Keep “Contact” as a destination section.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-about-and-contact-sections-to-match-the-provided-copy-and-contact-details-about-must-use-the-provided-two-paragraphs-and-include-ctas-download-cv-and-view-portfolio-they-may-be-placeholders-until-urls-files-are-provided-contact-must-display-want-to-collaborate-or-discuss-a-role-email-shaileysingh56-gmail-com-and-social-links-for-linkedin-and-x-use-placeholders-until-links-are-provided-also-update-the-contact-form-mailto-recipient-from-the-current-address-to-shaileysingh56-gmail-com",
+      "title": "Update the About and Contact sections to match the provided copy and contact details. About must use the provided two paragraphs and include CTAs “Download CV” and “View Portfolio” (they may be placeholders until URLs/files are provided). Contact must display: “Want to collaborate or discuss a role?”, email “shaileysingh56@gmail.com”, and social links for LinkedIn and X (use placeholders until links are provided). Also update the contact form mailto recipient from the current address to “shaileysingh56@gmail.com”.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-selected-signals-entries-for-avail-and-neon-evm-to-use-the-user-provided-copy-and-external-urls-and-ensure-the-open-action-opens-the-corresponding-url-in-a-new-browser-tab",
+      "title": "Update the “Selected Signals” entries for AVAIL and NEON EVM to use the user-provided copy and external URLs, and ensure the “Open” action opens the corresponding URL in a new browser tab.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-automatic-link-preview-display-under-the-text-for-the-avail-and-neon-evm-selected-signals-cards-using-the-provided-urls-as-the-preview-source-with-a-graceful-fallback-if-preview-metadata-cannot-be-fetched",
+      "title": "Add an automatic link preview display under the text for the AVAIL and NEON EVM “Selected Signals” cards, using the provided URLs as the preview source, with a graceful fallback if preview metadata cannot be fetched.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-rename-the-selected-signals-section-label-to-signature-transformative-work-everywhere-it-appears-in-the-ui-including-a-the-section-header-title-in-selectedsignalssection-b-the-navbar-link-label-c-the-footer-quick-link-label-and-d-the-centralized-content-title-in-frontend-src-content-sitecontent-ts",
+      "title": "Rename the “Selected Signals” section label to “Signature Transformative Work” everywhere it appears in the UI, including: (a) the section header title in SelectedSignalsSection, (b) the navbar link label, (c) the footer quick-link label, and (d) the centralized content title in frontend/src/content/siteContent.ts.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-signature-transformative-work-selected-signals-cards-add-a-new-italicized-category-subtitle-line-displayed-directly-under-each-card-title-with-the-following-values-1-avail-the-nexus-effect-strategic-repositioning-2-avail-arcana-merger-acquisition-3-neon-evm-network-extensions-category-creation-4-rollapps-on-solana-ethcc-thought-leadership-5-cointelegraph-selected-writing-see-next-requirement-for-title-update-industry-takes",
+      "title": "In the “Signature Transformative Work” (Selected Signals) cards, add a new italicized category/subtitle line displayed directly under each card title, with the following values: (1) AVAIL — The Nexus Effect: “Strategic Repositioning”; (2) AVAIL × ARCANA: “Merger & acquisition”; (3) NEON EVM — Network Extensions: “Category creation”; (4) ROLLAPPS ON SOLANA — EthCC: “Thought Leadership”; (5) COINTELEGRAPH — Selected Writing (see next requirement for title update): “Industry takes”.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-the-requested-copy-updates-in-the-signature-transformative-work-selected-signals-entries-as-follows-avail-the-nexus-effect-replace-the-description-with-repositioning-avail-from-data-availability-layer-alone-to-a-crosschain-coordination-infra-layer-for-web3-applications-launch-of-flagship-avail-nexus-avail-arcana-replace-the-description-with-merger-acquisition-as-narrative-acceleration-for-multichain-scalability-cointelegraph-card-update-the-title-to-cointelegraph-opinion-contributor-and-replace-the-description-with-research-driven-commentary-across-defi-ai-stablecoins-tokenization-rwas-and-emerging-tech",
+      "title": "Apply the requested copy updates in the “Signature Transformative Work” (Selected Signals) entries as follows:\n- AVAIL — The Nexus Effect: replace the description with “Repositioning Avail from Data Availability layer alone to a crosschain coordination infra layer for web3 applications. Launch of flagship Avail Nexus.”\n- AVAIL × ARCANA: replace the description with “Merger & Acquisition as narrative acceleration for multichain scalability”\n- COINTELEGRAPH card: update the title to “COINTELEGRAPH — Opinion Contributor” and replace the description with “Research-driven commentary across DeFi, AI, stablecoins, tokenization, RWAs, and emerging tech.”",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-avail-arcana-card-to-use-the-external-url-https-blog-availproject-org-avail-acquires-arcana-to-accelerate-multichain-scalability-as-its-open-link-opening-in-a-new-tab-and-enable-the-automated-link-preview-display-for-this-card-using-that-same-url",
+      "title": "Update the AVAIL × ARCANA card to use the external URL https://blog.availproject.org/avail-acquires-arcana-to-accelerate-multichain-scalability/ as its “Open” link (opening in a new tab) and enable the automated link preview display for this card using that same URL.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-avail-the-nexus-effect-description-copy-in-the-signature-transformative-work-section-to-exactly-repositioning-avail-from-data-availability-layer-to-a-crosschain-coordination-infra-layer-for-web3-apps-remove-alone-and-remove-the-second-sentence-about-avail-nexus",
+      "title": "Update the “AVAIL — The Nexus Effect” description copy in the “Signature Transformative Work” section to exactly: “Repositioning Avail from Data Availability layer to a crosschain coordination infra layer for web3 apps.” (remove “alone” and remove the second sentence about Avail Nexus).",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-reorder-the-cards-in-signature-transformative-work-so-that-neon-evm-network-extensions-appears-above-avail-arcana-swap-their-positions-while-keeping-all-existing-titles-categories-descriptions-links-and-link-preview-behavior-unchanged",
+      "title": "Reorder the cards in “Signature Transformative Work” so that “NEON EVM — Network Extensions” appears above “AVAIL × ARCANA” (swap their positions) while keeping all existing titles, categories, descriptions, links, and link preview behavior unchanged.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-improve-hero-section-readability-by-dimming-dulling-the-hero-background-image-and-setting-the-hero-description-sentence-that-starts-with-i-work-to-use-a-white-font-color-for-higher-contrast",
+      "title": "Improve hero section readability by dimming/dulling the hero background image and setting the hero description sentence that starts with “I work…” to use a white font color for higher contrast.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-signature-transformative-work-section-frontend-src-components-sections-selectedsignalssection-tsx-update-the-rollapps-on-solana-ethcc-card-so-its-link-is-https-luma-com-jl85cn4t-and-enable-the-automatic-link-preview-for-this-card-using-the-same-url",
+      "title": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), update the “ROLLAPPS ON SOLANA — EthCC” card so its link is https://luma.com/jl85cn4t and enable the automatic link preview for this card using the same URL.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-signature-transformative-work-section-frontend-src-components-sections-selectedsignalssection-tsx-update-the-cointelegraph-opinion-contributor-card-so-its-link-is-https-cointelegraph-com-authors-shailey-singh-and-enable-the-automatic-link-preview-for-this-card-using-the-same-url",
+      "title": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), update the “COINTELEGRAPH — Opinion Contributor” card so its link is https://cointelegraph.com/authors/shailey-singh and enable the automatic link preview for this card using the same URL.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-signature-transformative-work-section-frontend-src-components-sections-selectedsignalssection-tsx-add-a-new-card-adjacent-to-i-e-next-to-within-the-same-grid-as-the-cointelegraph-opinion-contributor-card-with-title-fancy-studios-gaming-creativity-italic-category-subtitle-blockchain-gaming-description-built-the-marketing-function-from-0-1-defining-strategy-processes-across-content-design-pr-and-community-and-link-https-fancy-studios-gitbook-io-whitepaper-enable-the-automatic-link-preview-for-this-new-card-using-the-same-url-and-ensure-its-open-action-opens-in-a-new-tab",
+      "title": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), add a new card adjacent to (i.e., next to, within the same grid as) the “COINTELEGRAPH — Opinion Contributor” card with: title “FANCY STUDIOS — Gaming Creativity”, italic category/subtitle “Blockchain gaming”, description “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”, and link https://fancy-studios.gitbook.io/whitepaper. Enable the automatic link preview for this new card using the same URL, and ensure its Open action opens in a new tab.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build a portfolio/marketing services website for blockchain businesses (showcase work and offered services).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Update website content/copy across sections to the provided Shailey Singh GTM & Narrative messaging (Home, Selected Signals, What I Build, Strategic Transformations, Market Notes, Ask My Narrative Brain, About, Contact, Footer) and include relevant CTAs/links placeholders.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "In “Selected Signals”, support per-entry external URL with an automatic link preview/embedded display beneath the text, and ensure the “Open” action opens the URL in a new tab.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Update “Selected Signals” entries: AVAIL uses https://availproject.org/nexus as the preview/open link; NEON EVM copy updated and uses https://cryptoslate.com/press-releases/neon-evm-adopts-network-extensions-to-redefine-solanas-product-categories/ as the preview/open link.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Implement a backend method to fetch and return basic link-preview metadata for a given HTTPS URL so the frontend can render automatic previews for Selected Signals.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Update “Selected Signals” section to be titled “Signature Transformative Work”, add per-entry italic category/subtitle lines, update item copy (AVAIL Nexus, AVAIL×ARCANA, NEON EVM, Rollapps on Solana, Cointelegraph), and add link preview + Open-in-new-tab URL for AVAIL×ARCANA.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Update AVAIL — The Nexus Effect description copy to: “Repositioning Avail from Data Availability layer to a crosschain coordination infra layer for web3 apps.” (remove “alone”, remove second sentence about Avail Nexus).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Reorder Signature Transformative Work cards so NEON EVM appears above AVAIL × ARCANA (swap their positions).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Improve hero readability: dull/dim the hero background image and set the “I work...” hero sentence text color to white for contrast.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Update Signature Transformative Work cards: set ROLLAPPS ON SOLANA — EthCC link/preview + Open-in-new-tab to https://luma.com/jl85cn4t; set COINTELEGRAPH — Opinion Contributor link + Open-in-new-tab to https://cointelegraph.com/authors/shailey-singh; add new adjacent card “FANCY STUDIOS — Gaming Creativity” with italic category “Blockchain gaming”, provided description, and link/preview + Open-in-new-tab to https://fancy-studios.gitbook.io/whitepaper.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Portfolio & marketing services website for blockchain businesses",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

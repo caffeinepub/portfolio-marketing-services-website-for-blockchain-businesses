@@ -1,0 +1,22 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T15:55:42.229Z",
+  "summary": "All three requested card updates/addition appear implemented in SelectedSignalsSection.tsx: ROLLAPPS link updated to luma.com with showPreview enabled, COINTELEGRAPH link updated with showPreview enabled, and a new FANCY STUDIOS card added next to Cointelegraph (immediately following in the signals array) with the exact requested category/description/link and showPreview enabled. The Open action uses target=\"_blank\" and rel=\"noopener noreferrer\" for all cards.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Enabled LinkPreview rendering (showPreview: true) for additional existing cards (e.g., AVAIL — The Nexus Effect, NEON EVM — Network Extensions, AVAIL × ARCANA), beyond the three specified items.",
+      "reason": "BuildRequest non-goals state not to change any other cards beyond the three specified items; the diff shows LinkPreview logic and showPreview enabled for other cards as well.",
+      "evidence": [
+        "frontend/src/components/sections/SelectedSignalsSection.tsx (signals array sets showPreview: true for AVAIL/NEON/AVAIL×ARCANA; map renders <LinkPreview url={signal.link} /> when showPreview is true)"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/sections/SelectedSignalsSection.tsx",
+    "project_state.json"
+  ]
+}

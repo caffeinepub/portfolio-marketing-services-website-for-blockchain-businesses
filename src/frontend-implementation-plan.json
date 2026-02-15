@@ -1,0 +1,55 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update Signature Transformative Work cards (links, previews, and Fancy Studios addition)",
+  "requirements": [
+    {
+      "id": "REQ-23",
+      "summary": "Update the “ROLLAPPS ON SOLANA — EthCC” card to use the luma.com URL and enable its LinkPreview.",
+      "acceptanceCriteria": [
+        "The “ROLLAPPS ON SOLANA — EthCC” card renders a LinkPreview using https://luma.com/jl85cn4t (i.e., showPreview is enabled and link is the luma.com URL).",
+        "Clicking the card’s “Open” action opens https://luma.com/jl85cn4t in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "operation": "modify",
+          "description": "In the signals array, update the “ROLLAPPS ON SOLANA — EthCC” item: set link to https://luma.com/jl85cn4t and set showPreview to true so the existing LinkPreview rendering path is enabled; confirm the Open action continues to use the same link with target=\"_blank\" and rel=\"noopener noreferrer\"."
+        }
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "summary": "Update the “COINTELEGRAPH — Opinion Contributor” card to use the Cointelegraph author URL and enable its LinkPreview.",
+      "acceptanceCriteria": [
+        "The “COINTELEGRAPH — Opinion Contributor” card renders a LinkPreview using https://cointelegraph.com/authors/shailey-singh.",
+        "Clicking the card’s “Open” action opens https://cointelegraph.com/authors/shailey-singh in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "operation": "modify",
+          "description": "In the signals array, update the “COINTELEGRAPH — Opinion Contributor” item: set link to https://cointelegraph.com/authors/shailey-singh and set showPreview to true so the existing LinkPreview rendering path is enabled; confirm the Open action continues to use the same link with target=\"_blank\" and rel=\"noopener noreferrer\"."
+        }
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "summary": "Add the “FANCY STUDIOS — Gaming Creativity” card next to the Cointelegraph card with LinkPreview enabled and an Open action that opens in a new tab.",
+      "acceptanceCriteria": [
+        "A new “FANCY STUDIOS — Gaming Creativity” card appears in the “Signature Transformative Work” grid next to the Cointelegraph card (i.e., nearby/adjacent in the grid layout).",
+        "The new card displays an italic category line exactly “Blockchain gaming”.",
+        "The new card description text matches exactly: “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”",
+        "The new card renders a LinkPreview using https://fancy-studios.gitbook.io/whitepaper.",
+        "Clicking the new card’s “Open” action opens https://fancy-studios.gitbook.io/whitepaper in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "operation": "modify",
+          "description": "Add a new item to the signals array adjacent to the “COINTELEGRAPH — Opinion Contributor” item (place it immediately before or after it to ensure adjacency in the existing 2-column grid): title “FANCY STUDIOS — Gaming Creativity”, category “Blockchain gaming” (rendered in italics by the existing markup), description exactly “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”, link https://fancy-studios.gitbook.io/whitepaper, and showPreview true so LinkPreview renders; ensure the existing Open action uses the same link with target=\"_blank\" and rel=\"noopener noreferrer\"."
+        }
+      ]
+    }
+  ]
+}

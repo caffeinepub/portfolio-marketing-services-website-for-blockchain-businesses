@@ -1,0 +1,62 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-in-the-signature-transformative-work-section-frontend-src-components-sections-selectedsignalssection-tsx-update-the-rollapps-on-solana-ethcc-card-so-its-link-is-https-luma-com-jl85cn4t-and-enable-the-automatic-link-preview-for-this-card-using-the-same-url",
+      "featureTitle": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), update the “ROLLAPPS ON SOLANA — EthCC” card so its link is https://luma.com/jl85cn4t and enable the automatic link preview for this card using the same URL.",
+      "files": [
+        "frontend/src/components/sections/SelectedSignalsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-23"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-in-the-signature-transformative-work-section-frontend-src-components-sections-selectedsignalssection-tsx-update-the-cointelegraph-opinion-contributor-card-so-its-link-is-https-cointelegraph-com-authors-shailey-singh-and-enable-the-automatic-link-preview-for-this-card-using-the-same-url",
+      "featureTitle": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), update the “COINTELEGRAPH — Opinion Contributor” card so its link is https://cointelegraph.com/authors/shailey-singh and enable the automatic link preview for this card using the same URL.",
+      "files": [
+        "frontend/src/components/sections/SelectedSignalsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-24"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-in-the-signature-transformative-work-section-frontend-src-components-sections-selectedsignalssection-tsx-add-a-new-card-adjacent-to-i-e-next-to-within-the-same-grid-as-the-cointelegraph-opinion-contributor-card-with-title-fancy-studios-gaming-creativity-italic-category-subtitle-blockchain-gaming-description-built-the-marketing-function-from-0-1-defining-strategy-processes-across-content-design-pr-and-community-and-link-https-fancy-studios-gitbook-io-whitepaper-enable-the-automatic-link-preview-for-this-new-card-using-the-same-url-and-ensure-its-open-action-opens-in-a-new-tab",
+      "featureTitle": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), add a new card adjacent to (i.e., next to, within the same grid as) the “COINTELEGRAPH — Opinion Contributor” card with: title “FANCY STUDIOS — Gaming Creativity”, italic category/subtitle “Blockchain gaming”, description “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”, and link https://fancy-studios.gitbook.io/whitepaper. Enable the automatic link preview for this new card using the same URL, and ensure its Open action opens in a new tab.",
+      "files": [
+        "frontend/src/components/sections/SelectedSignalsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-25"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
