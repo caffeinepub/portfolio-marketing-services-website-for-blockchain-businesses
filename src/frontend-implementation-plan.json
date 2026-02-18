@@ -1,53 +1,181 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update Signature Transformative Work cards (links, previews, and Fancy Studios addition)",
+  "title": "Aurient.ai Selects/Experience styling, category labels, and image behaviors",
   "requirements": [
     {
-      "id": "REQ-23",
-      "summary": "Update the “ROLLAPPS ON SOLANA — EthCC” card to use the luma.com URL and enable its LinkPreview.",
+      "id": "REQ-1",
+      "summary": "Restyle the Selects section to more closely match Aurient.ai’s Selects typography, spacing, card layout, and hover interactions while keeping existing Tailwind theme tokens.",
       "acceptanceCriteria": [
-        "The “ROLLAPPS ON SOLANA — EthCC” card renders a LinkPreview using https://luma.com/jl85cn4t (i.e., showPreview is enabled and link is the luma.com URL).",
-        "Clicking the card’s “Open” action opens https://luma.com/jl85cn4t in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+        "Selects section header, grid/card styling, and hover interactions visually align more closely with Aurient.ai’s Selects section (within the constraints of the existing design tokens).",
+        "No changes are made to immutable frontend paths listed in SYSTEM_CONTEXT."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "path": "frontend/src/components/sections/SelectsSection.tsx",
           "operation": "modify",
-          "description": "In the signals array, update the “ROLLAPPS ON SOLANA — EthCC” item: set link to https://luma.com/jl85cn4t and set showPreview to true so the existing LinkPreview rendering path is enabled; confirm the Open action continues to use the same link with target=\"_blank\" and rel=\"noopener noreferrer\"."
+          "description": "Update the Selects layout/typography and card hover behaviors to more closely match Aurient.ai’s Selects section while keeping existing Tailwind theme tokens. Continue using shadcn-ui Card/Badge primitives for consistent styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/SectionHeader.tsx",
+          "operation": "create",
+          "description": "Create a reusable section header component to standardize Aurient-like typography hierarchy and spacing for Selects/Experience headers without changing theme tokens. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the new SectionHeader component usage by updating Selects/Experience sections imports/usage as needed (ensure no orphaned UI and the sections remain in the same scroll order). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add minimal utility classes (via Tailwind layers) supporting Aurient-like card hover/transition polish (e.g., subtle border/gradient/glow helpers) while preserving existing OKLCH theme variables and tokens."
         }
       ]
     },
     {
-      "id": "REQ-24",
-      "summary": "Update the “COINTELEGRAPH — Opinion Contributor” card to use the Cointelegraph author URL and enable its LinkPreview.",
+      "id": "REQ-2",
+      "summary": "Restyle the Experience section to more closely match Aurient.ai’s Experience typography, spacing, timeline/card layout, and hover interactions while keeping existing Tailwind theme tokens.",
       "acceptanceCriteria": [
-        "The “COINTELEGRAPH — Opinion Contributor” card renders a LinkPreview using https://cointelegraph.com/authors/shailey-singh.",
-        "Clicking the card’s “Open” action opens https://cointelegraph.com/authors/shailey-singh in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+        "Experience section header and timeline/cards visually align more closely with Aurient.ai’s Experience section (within the constraints of the existing design tokens).",
+        "No changes are made to immutable frontend paths listed in SYSTEM_CONTEXT."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "path": "frontend/src/components/sections/ExperienceSection.tsx",
           "operation": "modify",
-          "description": "In the signals array, update the “COINTELEGRAPH — Opinion Contributor” item: set link to https://cointelegraph.com/authors/shailey-singh and set showPreview to true so the existing LinkPreview rendering path is enabled; confirm the Open action continues to use the same link with target=\"_blank\" and rel=\"noopener noreferrer\"."
+          "description": "Update Experience timeline/card layout, typography hierarchy, and hover states to more closely match Aurient.ai’s Experience section while keeping existing Tailwind theme tokens. Continue using shadcn-ui Card/Badge primitives where appropriate. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/SectionHeader.tsx",
+          "operation": "modify",
+          "description": "Ensure SectionHeader supports Experience’s title/subtitle layout variants (alignment, spacing) to match Aurient-like hierarchy. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Extend any shared timeline/card interaction utilities needed by Experience (e.g., timeline rail dot/line helpers), keeping existing theme tokens intact."
         }
       ]
     },
     {
-      "id": "REQ-25",
-      "summary": "Add the “FANCY STUDIOS — Gaming Creativity” card next to the Cointelegraph card with LinkPreview enabled and an Open action that opens in a new tab.",
+      "id": "REQ-3",
+      "summary": "Ensure Selects and Experience category labels display only Aurient.ai’s concise uppercase labels (AI, ART, TECH, CRYPTO, CULTURE) instead of longer strings.",
       "acceptanceCriteria": [
-        "A new “FANCY STUDIOS — Gaming Creativity” card appears in the “Signature Transformative Work” grid next to the Cointelegraph card (i.e., nearby/adjacent in the grid layout).",
-        "The new card displays an italic category line exactly “Blockchain gaming”.",
-        "The new card description text matches exactly: “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”",
-        "The new card renders a LinkPreview using https://fancy-studios.gitbook.io/whitepaper.",
-        "Clicking the new card’s “Open” action opens https://fancy-studios.gitbook.io/whitepaper in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+        "Where a category label is rendered in Selects and Experience, it uses one of these exact uppercase labels: AI, ART, TECH, CRYPTO, CULTURE.",
+        "The UI does not display the previous longer category strings (e.g., “Protocol Positioning”) in the category label position."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "path": "frontend/src/utils/categoryLabels.ts",
+          "operation": "create",
+          "description": "Add a small mapping/normalization utility that converts existing content categories into one of: AI, ART, TECH, CRYPTO, CULTURE, and provides a safe fallback behavior that never renders the old long category strings in the category-label position."
+        },
+        {
+          "path": "frontend/src/components/sections/SelectsSection.tsx",
           "operation": "modify",
-          "description": "Add a new item to the signals array adjacent to the “COINTELEGRAPH — Opinion Contributor” item (place it immediately before or after it to ensure adjacency in the existing 2-column grid): title “FANCY STUDIOS — Gaming Creativity”, category “Blockchain gaming” (rendered in italics by the existing markup), description exactly “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”, link https://fancy-studios.gitbook.io/whitepaper, and showPreview true so LinkPreview renders; ensure the existing Open action uses the same link with target=\"_blank\" and rel=\"noopener noreferrer\"."
+          "description": "Update category label rendering to use the new category label mapping utility so only AI/ART/TECH/CRYPTO/CULTURE appear in the category label position. Keep styling aligned with Aurient-like uppercase label presentation. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/ExperienceSection.tsx",
+          "operation": "modify",
+          "description": "Update category label rendering (if/where displayed) to use the new category label mapping utility so only AI/ART/TECH/CRYPTO/CULTURE appear in the category label position. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/aurientSelectsContent.ts",
+          "operation": "modify",
+          "description": "Adjust selects content metadata to support the new concise label scheme (e.g., add/replace with a displayCategory field that is one of AI/ART/TECH/CRYPTO/CULTURE) so the UI never needs to show the previous long category strings as the category label."
+        },
+        {
+          "path": "frontend/src/content/aurientExperienceContent.ts",
+          "operation": "modify",
+          "description": "Adjust experience content metadata to support concise category labeling where categories are displayed (e.g., add a displayCategory field with one of AI/ART/TECH/CRYPTO/CULTURE), ensuring longer strings do not appear in the category label position."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add Aurient.ai-matching images to Selects and Experience items, and make each image open in a new tab with proper rel attributes.",
+      "acceptanceCriteria": [
+        "Selects cards display images consistent with the images used on Aurient.ai’s Selects section, and Experience entries display images consistent with Aurient.ai’s Experience section (as applicable).",
+        "Clicking an image opens the image in a new tab using target=\"_blank\" and rel=\"noopener noreferrer\".",
+        "All images render reliably in production builds (no broken images)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/aurient/selects/ai-infrastructure.png",
+          "operation": "create",
+          "description": "Add the Selects image corresponding to Aurient.ai’s item imagery for the AI Infrastructure Narrative card. Ensure the asset is committed under public assets for reliable production rendering."
+        },
+        {
+          "path": "frontend/public/assets/aurient/selects/institutional-gtm.png",
+          "operation": "create",
+          "description": "Add the Selects image corresponding to Aurient.ai’s item imagery for the Institutional GTM Framework card. Ensure the asset is committed under public assets for reliable production rendering."
+        },
+        {
+          "path": "frontend/public/assets/aurient/selects/cross-chain-liquidity.png",
+          "operation": "create",
+          "description": "Add the Selects image corresponding to Aurient.ai’s item imagery for the Cross-Chain Liquidity Positioning card. Ensure the asset is committed under public assets for reliable production rendering."
+        },
+        {
+          "path": "frontend/public/assets/aurient/selects/developer-ecosystem.png",
+          "operation": "create",
+          "description": "Add the Selects image corresponding to Aurient.ai’s item imagery for the Developer Ecosystem Launch card. Ensure the asset is committed under public assets for reliable production rendering."
+        },
+        {
+          "path": "frontend/public/assets/aurient/selects/executive-thought-leadership.png",
+          "operation": "create",
+          "description": "Add the Selects image corresponding to Aurient.ai’s item imagery for the Executive Thought Leadership card. Ensure the asset is committed under public assets for reliable production rendering."
+        },
+        {
+          "path": "frontend/public/assets/aurient/selects/ma-strategic-comms.png",
+          "operation": "create",
+          "description": "Add the Selects image corresponding to Aurient.ai’s item imagery for the M&A Strategic Communications card. Ensure the asset is committed under public assets for reliable production rendering."
+        },
+        {
+          "path": "frontend/public/assets/aurient/experience/web3-infra.png",
+          "operation": "create",
+          "description": "Add the Experience image corresponding to Aurient.ai’s imagery for the Web3 Infrastructure Protocols entry (or closest matching visual used on Aurient.ai). Ensure the asset is committed under public assets for reliable production rendering."
+        },
+        {
+          "path": "frontend/public/assets/aurient/experience/avail.png",
+          "operation": "create",
+          "description": "Add the Experience image corresponding to Aurient.ai’s imagery for the Avail entry. Ensure the asset is committed under public assets for reliable production rendering."
+        },
+        {
+          "path": "frontend/public/assets/aurient/experience/neon.png",
+          "operation": "create",
+          "description": "Add the Experience image corresponding to Aurient.ai’s imagery for the Neon EVM entry. Ensure the asset is committed under public assets for reliable production rendering."
+        },
+        {
+          "path": "frontend/public/assets/aurient/experience/early-stage.png",
+          "operation": "create",
+          "description": "Add the Experience image corresponding to Aurient.ai’s imagery for the Early-Stage Web3 Protocols entry. Ensure the asset is committed under public assets for reliable production rendering."
+        },
+        {
+          "path": "frontend/src/content/aurientSelectsContent.ts",
+          "operation": "modify",
+          "description": "Extend Selects content items to include image metadata (public asset path + alt text) aligned with Aurient.ai’s Selects images so the UI can render images reliably."
+        },
+        {
+          "path": "frontend/src/content/aurientExperienceContent.ts",
+          "operation": "modify",
+          "description": "Extend Experience content items to include image metadata (public asset path + alt text) aligned with Aurient.ai’s Experience images (as applicable)."
+        },
+        {
+          "path": "frontend/src/components/ImageOpenInNewTab.tsx",
+          "operation": "create",
+          "description": "Create a small reusable component that renders an image wrapped in a link that opens in a new tab and always includes target=\"_blank\" with rel=\"noopener noreferrer\". Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/SelectsSection.tsx",
+          "operation": "modify",
+          "description": "Render each Selects card image using the new ImageOpenInNewTab component so clicking opens the image in a new tab with rel=\"noopener noreferrer\". Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/ExperienceSection.tsx",
+          "operation": "modify",
+          "description": "Render Experience entry images using the new ImageOpenInNewTab component (where applicable) so clicking opens the image in a new tab with rel=\"noopener noreferrer\". Verify the component's usage instructions before implementing."
         }
       ]
     }

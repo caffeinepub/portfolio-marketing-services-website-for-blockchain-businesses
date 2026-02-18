@@ -6,8 +6,8 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Signature Transformative Work', href: '#selected-signals' },
-  { label: 'What I Build', href: '#what-i-build' },
-  { label: 'Strategic Transformations', href: '#strategic-transformations' },
+  { label: 'Selects', href: '#selects' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Market Notes', href: '#market-notes' },
   { label: 'Ask My Narrative Brain', href: '#ask-my-narrative-brain' },
   { label: 'About', href: '#about' },

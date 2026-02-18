@@ -1,73 +1,99 @@
 {
   "kind": "build_request",
-  "title": "Update Signature Transformative Work links and add Fancy Studios card",
+  "title": "Match Aurient.ai Selects/Experience styling, category labels, and image behaviors",
+  "projectName": "Aurient Style Sections",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-23",
-      "text": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), update the “ROLLAPPS ON SOLANA — EthCC” card so its link is https://luma.com/jl85cn4t and enable the automatic link preview for this card using the same URL.",
+      "id": "REQ-1",
+      "text": "Update the Selects section UI to more closely match the styling and interaction patterns of the Selects section on https://www.aurient.ai/ (typography hierarchy, spacing, card layout, hover states), while keeping the app’s existing Tailwind theme tokens (e.g., accent/background/foreground).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-1"
         ],
         "quotes": [
-          "1. ROLLAPPS ON SOLANA — EthCC\nThe view should show this - https://luma.com/jl85cn4t\n\nAnd the open link should be in open new tab - https://luma.com/jl85cn4t"
+          "Yes want the styling to match the styling of Selects and Expericne section as seen here - https://www.aurient.ai/"
         ]
       },
       "acceptanceCriteria": [
-        "The “ROLLAPPS ON SOLANA — EthCC” card renders a LinkPreview using https://luma.com/jl85cn4t (i.e., showPreview is enabled and link is the luma.com URL).",
-        "Clicking the card’s “Open” action opens https://luma.com/jl85cn4t in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+        "Selects section header, grid/card styling, and hover interactions visually align more closely with Aurient.ai’s Selects section (within the constraints of the existing design tokens).",
+        "No changes are made to immutable frontend paths listed in SYSTEM_CONTEXT."
       ]
     },
     {
-      "id": "REQ-24",
-      "text": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), update the “COINTELEGRAPH — Opinion Contributor” card so its link is https://cointelegraph.com/authors/shailey-singh and enable the automatic link preview for this card using the same URL.",
+      "id": "REQ-2",
+      "text": "Update the Experience section UI to more closely match the styling and interaction patterns of the Experience section on https://www.aurient.ai/ (typography hierarchy, spacing, timeline/card layout, hover states), while keeping the app’s existing Tailwind theme tokens (e.g., accent/background/foreground).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-1"
         ],
         "quotes": [
-          "2. COINTELEGRAPH — Opinion Contributor\nHere this link should reflect - https://cointelegraph.com/authors/shailey-singh\n\nand open in new tab"
+          "Yes want the styling to match the styling of Selects and Expericne section as seen here - https://www.aurient.ai/"
         ]
       },
       "acceptanceCriteria": [
-        "The “COINTELEGRAPH — Opinion Contributor” card renders a LinkPreview using https://cointelegraph.com/authors/shailey-singh.",
-        "Clicking the card’s “Open” action opens https://cointelegraph.com/authors/shailey-singh in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+        "Experience section header and timeline/cards visually align more closely with Aurient.ai’s Experience section (within the constraints of the existing design tokens).",
+        "No changes are made to immutable frontend paths listed in SYSTEM_CONTEXT."
       ]
     },
     {
-      "id": "REQ-25",
-      "text": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), add a new card adjacent to (i.e., next to, within the same grid as) the “COINTELEGRAPH — Opinion Contributor” card with: title “FANCY STUDIOS — Gaming Creativity”, italic category/subtitle “Blockchain gaming”, description “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”, and link https://fancy-studios.gitbook.io/whitepaper. Enable the automatic link preview for this new card using the same URL, and ensure its Open action opens in a new tab.",
+      "id": "REQ-3",
+      "text": "Adjust Selects and Experience content labeling/writing so the visible category labeling style matches Aurient.ai’s concise, uppercase category labels: AI, ART, TECH, CRYPTO, CULTURE (use these exact labels where categories are displayed).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-1"
         ],
         "quotes": [
-          "3. Next to COintelegrpah introduce anothe rplacard with these details:\n\nFANCY STUDIOS — Gaming Creativity\nBlockchain gaming (italics)\nBuilt the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.\n\nDisplay the link and Open link in new tab - https://fancy-studios.gitbook.io/whitepaper"
+          "It should use the same style of writing \nAI\nART\nTECH\nCRYPTO\nCULTURE"
         ]
       },
       "acceptanceCriteria": [
-        "A new “FANCY STUDIOS — Gaming Creativity” card appears in the “Signature Transformative Work” grid next to the Cointelegraph card (i.e., nearby/adjacent in the grid layout).",
-        "The new card displays an italic category line exactly “Blockchain gaming”.",
-        "The new card description text matches exactly: “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”",
-        "The new card renders a LinkPreview using https://fancy-studios.gitbook.io/whitepaper.",
-        "Clicking the new card’s “Open” action opens https://fancy-studios.gitbook.io/whitepaper in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\")."
+        "Where a category label is rendered in Selects and Experience, it uses one of these exact uppercase labels: AI, ART, TECH, CRYPTO, CULTURE.",
+        "The UI does not display the previous longer category strings (e.g., “Protocol Positioning”) in the category label position."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add the same images shown in Aurient.ai’s Selects and Experience sections to the corresponding items in this app, and ensure each image is clickable and opens the image in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\").",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "And it should have the same images displayed opening in new tab."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Selects cards display images consistent with the images used on Aurient.ai’s Selects section, and Experience entries display images consistent with Aurient.ai’s Experience section (as applicable).",
+        "Clicking an image opens the image in a new tab using target=\"_blank\" and rel=\"noopener noreferrer\".",
+        "All images render reliably in production builds (no broken images)."
       ]
     }
   ],
   "constraints": [
-    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
-    "Keep the backend single-actor architecture unchanged (no new backend services)."
+    "Frontend immutable paths listed in SYSTEM_CONTEXT must not be edited; compose UI components instead of modifying their sources.",
+    "All external links and image-open actions that open new tabs must include rel=\"noopener noreferrer\" for security."
   ],
   "nonGoals": [
-    "Do not change any other card titles, categories, descriptions, ordering, or links beyond the three items specified.",
-    "Do not change global navigation, hero section, About, Contact, or other sections."
+    "No backend (Motoko) changes are required unless strictly necessary for the image display behavior.",
+    "No new authentication, database, or third-party integrations beyond what already exists."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

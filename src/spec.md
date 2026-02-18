@@ -1,11 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Update and expand the “Signature Transformative Work” cards to use the correct URLs with automatic link previews, and add a new Fancy Studios card.
+**Goal:** Align the app’s Selects and Experience sections with Aurient.ai’s styling, category label format, and image click behavior while keeping existing Tailwind theme tokens.
 
 **Planned changes:**
-- Update the “ROLLAPPS ON SOLANA — EthCC” card to use https://luma.com/jl85cn4t for both its link and LinkPreview, and ensure its Open action opens in a new tab.
-- Update the “COINTELEGRAPH — Opinion Contributor” card to use https://cointelegraph.com/authors/shailey-singh for both its link and LinkPreview, and ensure its Open action opens in a new tab.
-- Add a new card adjacent to the Cointelegraph card titled “FANCY STUDIOS — Gaming Creativity” with italic subtitle “Blockchain gaming”, the provided description text, and https://fancy-studios.gitbook.io/whitepaper for both its link and LinkPreview, with Open in a new tab.
+- Update Selects section typography, spacing, card/grid layout, and hover interactions to more closely match Aurient.ai’s Selects section (within existing theme tokens).
+- Update Experience section typography, spacing, timeline/card layout, and hover interactions to more closely match Aurient.ai’s Experience section (within existing theme tokens).
+- Replace displayed category labeling in Selects and Experience with concise uppercase labels: AI, ART, TECH, CRYPTO, CULTURE (and remove longer category strings from the label position).
+- Add/replace Selects and Experience item images to match those shown on Aurient.ai, and make each image open in a new tab with `target="_blank"` and `rel="noopener noreferrer"`.
 
-**User-visible outcome:** In the “Signature Transformative Work” section, users see updated link previews and can open the Rollapps, Cointelegraph, and new Fancy Studios links in new tabs, with the Fancy Studios card appearing next to the Cointelegraph card in the grid.
+**User-visible outcome:** Selects and Experience look and behave more like Aurient.ai, show concise uppercase category labels, and display matching images that open in a new browser tab when clicked.

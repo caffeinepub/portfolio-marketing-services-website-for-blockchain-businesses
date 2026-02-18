@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, Bell } from 'lucide-react';
+import MarqueeLinkPreviewBand from '../MarqueeLinkPreviewBand';
+import { writingLinks } from '@/content/marketNotesWritingLinks';
 
 export default function MarketNotesSection() {
   return (
@@ -26,6 +28,11 @@ export default function MarketNotesSection() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Stablecoin settlement rails • Crosschain coordination • Modular execution • Institutional adoption • AI-native financial systems
               </p>
+
+              {/* Marquee Band */}
+              <div className="pt-4">
+                <MarqueeLinkPreviewBand urls={writingLinks} />
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button

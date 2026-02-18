@@ -1,46 +1,102 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-15T15:55:42.232Z",
+  "generatedAt": "2026-02-17T13:31:20.180Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
-    "implemented": 3,
+    "total": 4,
+    "implemented": 4,
     "items": [
       {
-        "id": "REQ-23",
-        "summary": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), update the “ROLLAPPS ON SOLANA — EthCC” card so its link is https://luma.com/jl85cn4t and enable the automatic link preview for this card using the same URL.",
+        "id": "REQ-1",
+        "summary": "Update the Selects section UI to more closely match the styling and interaction patterns of the Selects section on https://www.aurient.ai/ (typography hierarchy, spacing, card layout, hover states), while keeping the app’s existing Tailwind theme tokens (e.g., accent/background/foreground).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/sections/SelectedSignalsSection.tsx"
+          "frontend/src/components/sections/SelectsSection.tsx",
+          "frontend/src/components/sections/SectionHeader.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/index.css"
         ],
         "matchedFiles": [
-          "frontend/src/components/sections/SelectedSignalsSection.tsx"
+          "frontend/src/components/sections/SelectsSection.tsx",
+          "frontend/src/components/sections/SectionHeader.tsx",
+          "frontend/src/index.css"
         ]
       },
       {
-        "id": "REQ-24",
-        "summary": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), update the “COINTELEGRAPH — Opinion Contributor” card so its link is https://cointelegraph.com/authors/shailey-singh and enable the automatic link preview for this card using the same URL.",
+        "id": "REQ-2",
+        "summary": "Update the Experience section UI to more closely match the styling and interaction patterns of the Experience section on https://www.aurient.ai/ (typography hierarchy, spacing, timeline/card layout, hover states), while keeping the app’s existing Tailwind theme tokens (e.g., accent/background/foreground).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/sections/SelectedSignalsSection.tsx"
+          "frontend/src/components/sections/ExperienceSection.tsx",
+          "frontend/src/components/sections/SectionHeader.tsx",
+          "frontend/src/index.css"
         ],
         "matchedFiles": [
-          "frontend/src/components/sections/SelectedSignalsSection.tsx"
+          "frontend/src/components/sections/ExperienceSection.tsx",
+          "frontend/src/components/sections/SectionHeader.tsx",
+          "frontend/src/index.css"
         ]
       },
       {
-        "id": "REQ-25",
-        "summary": "In the “Signature Transformative Work” section (frontend/src/components/sections/SelectedSignalsSection.tsx), add a new card adjacent to (i.e., next to, within the same grid as) the “COINTELEGRAPH — Opinion Contributor” card with: title “FANCY STUDIOS — Gaming Creativity”, italic category/subtitle “Blockchain gaming”, description “Built the marketing function from 0→1, defining strategy, processes across content, design, PR, and community.”, and link https://fancy-studios.gitbook.io/whitepaper. Enable the automatic link preview for this new card using the same URL, and ensure its Open action opens in a new tab.",
+        "id": "REQ-3",
+        "summary": "Adjust Selects and Experience content labeling/writing so the visible category labeling style matches Aurient.ai’s concise, uppercase category labels: AI, ART, TECH, CRYPTO, CULTURE (use these exact labels where categories are displayed).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/sections/SelectedSignalsSection.tsx"
+          "frontend/src/utils/categoryLabels.ts",
+          "frontend/src/components/sections/SelectsSection.tsx",
+          "frontend/src/components/sections/ExperienceSection.tsx",
+          "frontend/src/content/aurientSelectsContent.ts",
+          "frontend/src/content/aurientExperienceContent.ts"
         ],
         "matchedFiles": [
-          "frontend/src/components/sections/SelectedSignalsSection.tsx"
+          "frontend/src/utils/categoryLabels.ts",
+          "frontend/src/components/sections/SelectsSection.tsx",
+          "frontend/src/components/sections/ExperienceSection.tsx",
+          "frontend/src/content/aurientSelectsContent.ts",
+          "frontend/src/content/aurientExperienceContent.ts"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Add the same images shown in Aurient.ai’s Selects and Experience sections to the corresponding items in this app, and ensure each image is clickable and opens the image in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\").",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/aurient/selects/ai-infrastructure.png",
+          "frontend/public/assets/aurient/selects/institutional-gtm.png",
+          "frontend/public/assets/aurient/selects/cross-chain-liquidity.png",
+          "frontend/public/assets/aurient/selects/developer-ecosystem.png",
+          "frontend/public/assets/aurient/selects/executive-thought-leadership.png",
+          "frontend/public/assets/aurient/selects/ma-strategic-comms.png",
+          "frontend/public/assets/aurient/experience/web3-infra.png",
+          "frontend/public/assets/aurient/experience/avail.png",
+          "frontend/public/assets/aurient/experience/neon.png",
+          "frontend/public/assets/aurient/experience/early-stage.png",
+          "frontend/src/content/aurientSelectsContent.ts",
+          "frontend/src/content/aurientExperienceContent.ts",
+          "frontend/src/components/ImageOpenInNewTab.tsx",
+          "frontend/src/components/sections/SelectsSection.tsx",
+          "frontend/src/components/sections/ExperienceSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/aurient/selects/ai-infrastructure.png",
+          "frontend/public/assets/aurient/selects/institutional-gtm.png",
+          "frontend/public/assets/aurient/selects/cross-chain-liquidity.png",
+          "frontend/public/assets/aurient/selects/developer-ecosystem.png",
+          "frontend/public/assets/aurient/selects/executive-thought-leadership.png",
+          "frontend/public/assets/aurient/selects/ma-strategic-comms.png",
+          "frontend/public/assets/aurient/experience/web3-infra.png",
+          "frontend/public/assets/aurient/experience/avail.png",
+          "frontend/public/assets/aurient/experience/neon.png",
+          "frontend/public/assets/aurient/experience/early-stage.png",
+          "frontend/src/content/aurientSelectsContent.ts",
+          "frontend/src/content/aurientExperienceContent.ts",
+          "frontend/src/components/ImageOpenInNewTab.tsx",
+          "frontend/src/components/sections/SelectsSection.tsx",
+          "frontend/src/components/sections/ExperienceSection.tsx"
         ]
       }
     ]
@@ -50,7 +106,25 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/sections/SelectedSignalsSection.tsx",
+    "frontend/public/assets/aurient/experience/avail.png",
+    "frontend/public/assets/aurient/experience/early-stage.png",
+    "frontend/public/assets/aurient/experience/neon.png",
+    "frontend/public/assets/aurient/experience/web3-infra.png",
+    "frontend/public/assets/aurient/selects/ai-infrastructure.png",
+    "frontend/public/assets/aurient/selects/cross-chain-liquidity.png",
+    "frontend/public/assets/aurient/selects/developer-ecosystem.png",
+    "frontend/public/assets/aurient/selects/executive-thought-leadership.png",
+    "frontend/public/assets/aurient/selects/institutional-gtm.png",
+    "frontend/public/assets/aurient/selects/ma-strategic-comms.png",
+    "frontend/src/components/ImageOpenInNewTab.tsx",
+    "frontend/src/components/sections/ExperienceSection.tsx",
+    "frontend/src/components/sections/SectionHeader.tsx",
+    "frontend/src/components/sections/SelectsSection.tsx",
+    "frontend/src/content/aurientExperienceContent.ts",
+    "frontend/src/content/aurientSelectsContent.ts",
+    "frontend/src/index.css",
+    "frontend/src/utils/categoryLabels.ts",
+    "frontend/tailwind.config.js",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

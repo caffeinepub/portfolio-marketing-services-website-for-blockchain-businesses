@@ -79,6 +79,16 @@
     .text-balance {
         text-wrap: balance;
     }
+    
+    /* Aurient-style card hover effects */
+    .aurient-card-hover {
+        @apply transition-all duration-300 hover:border-accent/50 hover:shadow-neon-lg;
+    }
+    
+    /* Category badge styling */
+    .category-badge {
+        @apply text-xs font-bold tracking-wider uppercase;
+    }
 }
 
 /* Custom scrollbar */
@@ -111,4 +121,45 @@ html {
 
 .neon-text {
     text-shadow: 0 0 10px oklch(var(--accent) / 0.5);
+}
+
+/* Marquee animation styles */
+.marquee-track {
+    animation: marquee-scroll 40s linear infinite;
+}
+
+/* Pause animation on hover or focus-within */
+.marquee-container:hover .marquee-track,
+.marquee-container:focus-within .marquee-track {
+    animation-play-state: paused;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+        animation: none;
+    }
+    
+    .marquee-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    
+    .marquee-container::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+    .marquee-container::-webkit-scrollbar-track {
+        background: oklch(var(--muted) / 0.2);
+        border-radius: 4px;
+    }
+    
+    .marquee-container::-webkit-scrollbar-thumb {
+        background: oklch(var(--accent) / 0.5);
+        border-radius: 4px;
+    }
+    
+    .marquee-container::-webkit-scrollbar-thumb:hover {
+        background: oklch(var(--accent));
+    }
 }

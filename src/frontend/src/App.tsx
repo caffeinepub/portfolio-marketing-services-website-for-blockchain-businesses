@@ -3,8 +3,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HeroSection from './components/sections/HeroSection';
 import SelectedSignalsSection from './components/sections/SelectedSignalsSection';
-import WhatIBuildSection from './components/sections/WhatIBuildSection';
-import StrategicTransformationsSection from './components/sections/StrategicTransformationsSection';
+import SelectsSection from './components/sections/SelectsSection';
+import ExperienceSection from './components/sections/ExperienceSection';
 import MarketNotesSection from './components/sections/MarketNotesSection';
 import AskMyNarrativeBrainSection from './components/sections/AskMyNarrativeBrainSection';
 import AboutSection from './components/sections/AboutSection';
@@ -25,8 +25,8 @@ function App() {
         <main className="flex-1">
           <HeroSection />
           <SelectedSignalsSection />
-          <WhatIBuildSection />
-          <StrategicTransformationsSection />
+          <SelectsSection />
+          <ExperienceSection />
           <MarketNotesSection />
           <AskMyNarrativeBrainSection />
           <AboutSection />
