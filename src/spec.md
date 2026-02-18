@@ -1,11 +1,13 @@
 # Specification
 
 ## Summary
-**Goal:** Undo an incorrect image swap by restoring the original Hero background while updating only the “AVAIL — The Nexus Effect” Selected Signals card to use the user-provided image.
+**Goal:** Revert the Shailey Portfolio application from Draft Version 13 back to Draft Version 10, removing all changes introduced in drafts 11–13.
 
 **Planned changes:**
-- Restore the Hero section background asset content so it matches the original (and is not the AVAIL image), without changing the existing src path referenced in `frontend/src/components/sections/HeroSection.tsx`.
-- Add the user-provided AVAIL image to `frontend/public/assets/` (or a subfolder) and reference it via an absolute public path (`/assets/...`).
-- Update only the “AVAIL — The Nexus Effect” card in `frontend/src/components/sections/SelectedSignalsSection.tsx` to display the user-provided image instead of the current X embed/preview, leaving all other cards unchanged.
+- Restore the codebase and deployed app UI/behavior to match App draft Version 10 exactly.
+- Undo/restore any image/media changes made in drafts 11–13 so site visuals match Draft Version 10, including:
+  - The Selected Signals “AVAIL — The Nexus Effect” card media appearance/behavior.
+  - The Hero section background asset/reference.
+- Ensure the reverted build passes any existing automated builds/tests.
 
-**User-visible outcome:** The Hero background looks as it did before the mistaken swap, and the “AVAIL — The Nexus Effect” card shows the provided static image (not an X preview), with no other sections affected.
+**User-visible outcome:** The live site looks and behaves exactly as it did in Draft Version 10, with the Hero background and the “AVAIL — The Nexus Effect” card media restored to their Draft Version 10 behavior and no remaining changes from drafts 11–13.

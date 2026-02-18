@@ -1,45 +1,45 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-18T05:04:46.632Z",
+  "generatedAt": "2026-02-18T05:15:32.415Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
+    "total": 2,
     "implemented": 2,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Restore the website Hero section background image to the original asset (undo the accidental replacement), so the Hero background is no longer the user-provided AVAIL image.",
-        "status": "missing",
-        "plannedFiles": [
-          "frontend/public/assets/1.png"
-        ],
-        "matchedFiles": []
-      },
-      {
-        "id": "REQ-2",
-        "summary": "In the “AVAIL — The Nexus Effect” card within the Selected Signals section, replace the currently shown media (X embed/preview) with the user-provided image, and ensure only that AVAIL card is updated (no other sections).",
+        "summary": "Revert the codebase and deployed app from the current state (App draft Version 13) back to the state from three drafts earlier (App draft Version 10), undoing all changes introduced in drafts 11–13.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/sections/SelectedSignalsSection.tsx"
+          "frontend/src/App.tsx",
+          "frontend/src/components/sections/HeroSection.tsx",
+          "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "frontend/src/components/ImageOpenInNewTab.tsx",
+          "frontend/src/index.css",
+          "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+          "frontend/public/assets/generated/avail-nexus-effect.dim_1600x900.png"
         ],
         "matchedFiles": [
-          "frontend/src/components/sections/SelectedSignalsSection.tsx"
+          "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "frontend/public/assets/generated/avail-nexus-effect.dim_1600x900.png"
         ]
       },
       {
-        "id": "REQ-3",
-        "summary": "Add the user-provided image as a static frontend asset (served from the frontend’s public assets) and reference it from the “AVAIL — The Nexus Effect” card.",
+        "id": "REQ-2",
+        "summary": "As part of the revert, restore the website visuals/content affected by the recent image/media changes so they match Draft Version 10 (including the Selected Signals “AVAIL — The Nexus Effect” card media behavior and the Hero section background asset/reference).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/avail-nexus-effect.dim_1600x900.png",
-          "frontend/src/components/sections/SelectedSignalsSection.tsx"
+          "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "frontend/src/components/sections/HeroSection.tsx",
+          "frontend/src/components/sections/SelectsSection.tsx",
+          "frontend/src/components/sections/ExperienceSection.tsx",
+          "frontend/src/components/ImageOpenInNewTab.tsx"
         ],
         "matchedFiles": [
-          "frontend/public/assets/generated/avail-nexus-effect.dim_1600x900.png",
           "frontend/src/components/sections/SelectedSignalsSection.tsx"
         ]
       }
@@ -50,9 +50,9 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/1.png",
     "frontend/public/assets/generated/avail-nexus-effect.dim_1600x900.png",
-    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/public/assets/generated/x-post-cta.dim_1200x675.png",
+    "frontend/src/components/XPostEmbed.tsx",
     "frontend/src/components/sections/SelectedSignalsSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",

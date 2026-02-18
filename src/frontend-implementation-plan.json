@@ -1,56 +1,87 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Restore Hero background asset and update AVAIL — The Nexus Effect card media",
+  "title": "Shailey Portfolio — Frontend revert to Draft Version 10 visuals/content",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Restore the original Hero background image content while keeping the existing /assets/1.png src reference unchanged.",
+      "summary": "Revert frontend UI/behavior to match App draft Version 10 by undoing Drafts 11–13 changes.",
       "acceptanceCriteria": [
-        "HeroSection background image renders as it did before the mistaken swap (i.e., not the user-provided AVAIL image).",
-        "The Hero section still uses the same src path currently referenced in code (frontend/src/components/sections/HeroSection.tsx), but the underlying asset content is restored to the original hero background."
+        "The deployed app reflects the exact UI/behavior of App draft Version 10.",
+        "No functionality or content introduced in drafts 11–13 remains in the reverted build.",
+        "All automated builds/tests (if present) pass after the revert."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/1.png",
+          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Replace the current (incorrect) Hero background image file content with the original Hero background image content, keeping the filename and public path unchanged so HeroSection continues to reference /assets/1.png."
+          "description": "Re-align the main section ordering, rendered components, and any layout/behavior toggles so the page composition matches Draft Version 10 (removing any Drafts 11–13-only sections/props/logic)."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Revert Hero section structure/classes/content to Draft Version 10 (including background treatment), removing any Drafts 11–13-only tweaks."
+        },
+        {
+          "path": "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "operation": "modify",
+          "description": "Revert the Selected Signals grid/card composition and per-card rendering conditions to Draft Version 10, ensuring Drafts 11–13-only UI/content paths are removed."
+        },
+        {
+          "path": "frontend/src/components/ImageOpenInNewTab.tsx",
+          "operation": "modify",
+          "description": "If Drafts 11–13 altered global image interaction patterns, restore Draft Version 10 behavior (hover, link wrapping, sizing) so downstream sections render identically."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Revert any Drafts 11–13 global visual token/style changes (colors, overlays, animations, background/border styling) that affect the Draft Version 10 look and feel."
+        },
+        {
+          "path": "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+          "operation": "delete",
+          "description": "If this generated asset was introduced/modified in Drafts 11–13 and is not part of Draft Version 10, remove it to prevent accidental reuse. Ensure the Draft Version 10 hero background asset remains available via its original path."
+        },
+        {
+          "path": "frontend/public/assets/generated/avail-nexus-effect.dim_1600x900.png",
+          "operation": "delete",
+          "description": "If this generated asset was introduced/modified in Drafts 11–13 and is not part of Draft Version 10, remove it to prevent accidental reuse. Ensure the Draft Version 10 AVAIL card media asset remains available via its original path."
         }
       ]
     },
     {
       "id": "REQ-2",
-      "summary": "Update only the “AVAIL — The Nexus Effect” card to show the user-provided image instead of the current X embed/preview, leaving all other cards unchanged.",
+      "summary": "Restore Draft Version 10 visuals/content for image/media changes (AVAIL — The Nexus Effect card media behavior and Hero background).",
       "acceptanceCriteria": [
-        "The “AVAIL — The Nexus Effect” card in frontend/src/components/sections/SelectedSignalsSection.tsx displays the user-provided image.",
-        "The user-provided image does not appear as the Hero background.",
-        "Other Selected Signals cards continue to behave as they did before (no unintended image changes)."
+        "The “AVAIL — The Nexus Effect” card media matches how it appeared/behaved in Draft Version 10.",
+        "The Hero section background matches how it appeared/behaved in Draft Version 10.",
+        "No unintended image swap remains anywhere on the site."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/sections/SelectedSignalsSection.tsx",
           "operation": "modify",
-          "description": "Update the signals data/rendering so only the “AVAIL — The Nexus Effect” card shows a static image (from /assets/...) in place of the XPostEmbed/preview; keep other cards’ embed/preview behavior unchanged. Optionally compose the existing ImageOpenInNewTab component for the image presentation (do not modify any files under frontend/src/components/ui). Verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Add the user-provided AVAIL image as a static public asset and reference it from the AVAIL card via an absolute /assets/... path.",
-      "acceptanceCriteria": [
-        "The user-provided image is stored under frontend/public/assets/ (or a subfolder) and is referenced via an absolute public path (e.g., /assets/...).",
-        "No backend changes are required to serve or fetch the image."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/avail-nexus-effect.dim_1600x900.png",
-          "operation": "create",
-          "description": "Add the user-provided image as a static public asset at frontend/public/assets/generated/avail-nexus-effect.dim_1600x900.png so it can be referenced via an absolute /assets/... public path."
+          "description": "Restore Draft Version 10 media behavior for the “AVAIL — The Nexus Effect” card (image vs link preview usage, click/hover behavior, sizing/cropping). Use existing shadcn-ui Card/Button primitives already in the file; verify the component's usage instructions before implementing."
         },
         {
-          "path": "frontend/src/components/sections/SelectedSignalsSection.tsx",
+          "path": "frontend/src/components/sections/HeroSection.tsx",
           "operation": "modify",
-          "description": "Reference the new static asset (frontend/public/assets/generated/avail-nexus-effect.dim_1600x900.png) from the “AVAIL — The Nexus Effect” card using an absolute public path, ensuring no backend fetch/storage is introduced and no other section uses this image."
+          "description": "Restore Draft Version 10 hero background asset reference and visual treatment (overlay, opacity/brightness, gradients), removing any Drafts 11–13-only background swaps."
+        },
+        {
+          "path": "frontend/src/components/sections/SelectsSection.tsx",
+          "operation": "modify",
+          "description": "Audit and revert any unintended image/media swaps introduced in Drafts 11–13 within Selects cards (image sources, open-in-new-tab behavior) to match Draft Version 10."
+        },
+        {
+          "path": "frontend/src/components/sections/ExperienceSection.tsx",
+          "operation": "modify",
+          "description": "Audit and revert any unintended image/media swaps introduced in Drafts 11–13 within Experience cards (image sources, open-in-new-tab behavior) to match Draft Version 10."
+        },
+        {
+          "path": "frontend/src/components/ImageOpenInNewTab.tsx",
+          "operation": "modify",
+          "description": "If Draft Version 10 used different image click/hover behavior (e.g., no new-tab wrapping, different hover scale, or different object-fit), adjust the shared component to match Draft Version 10 so all dependent sections inherit the correct behavior."
         }
       ]
     }

@@ -32,13 +32,8 @@ export default function XPostEmbed({ tweetUrl }: XPostEmbedProps) {
   return (
     <div ref={containerRef} className="w-full">
       <blockquote className="twitter-tweet" data-theme="dark">
-        <a href={tweetUrl} target="_blank" rel="noopener noreferrer">
-          <img 
-            src="/assets/generated/x-post-cta.dim_1200x675.png" 
-            alt="View X Post" 
-            className="w-full h-auto"
-          />
-        </a>
+        <p lang="en" dir="ltr">Loading tweet...</p>
+        <a href={tweetUrl}>View on X</a>
       </blockquote>
     </div>
   );

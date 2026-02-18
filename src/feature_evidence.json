@@ -2,8 +2,27 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-in-the-avail-the-nexus-effect-card-within-the-selected-signals-section-replace-the-currently-shown-media-x-embed-preview-with-the-user-provided-image-and-ensure-only-that-avail-card-is-updated-no-other-sections",
-      "featureTitle": "In the “AVAIL — The Nexus Effect” card within the Selected Signals section, replace the currently shown media (X embed/preview) with the user-provided image, and ensure only that AVAIL card is updated (no other sections).",
+      "featureId": "feature-revert-the-codebase-and-deployed-app-from-the-current-state-app-draft-version-13-back-to-the-state-from-three-drafts-earlier-app-draft-version-10-undoing-all-changes-introduced-in-drafts-11-13",
+      "featureTitle": "Revert the codebase and deployed app from the current state (App draft Version 13) back to the state from three drafts earlier (App draft Version 10), undoing all changes introduced in drafts 11–13.",
+      "files": [
+        "frontend/src/components/sections/SelectedSignalsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-as-part-of-the-revert-restore-the-website-visuals-content-affected-by-the-recent-image-media-changes-so-they-match-draft-version-10-including-the-selected-signals-avail-the-nexus-effect-card-media-behavior-and-the-hero-section-background-asset-reference",
+      "featureTitle": "As part of the revert, restore the website visuals/content affected by the recent image/media changes so they match Draft Version 10 (including the Selected Signals “AVAIL — The Nexus Effect” card media behavior and the Hero section background asset/reference).",
       "files": [
         "frontend/src/components/sections/SelectedSignalsSection.tsx"
       ],
@@ -17,25 +36,6 @@
       ],
       "testIds": [
         "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-the-user-provided-image-as-a-static-frontend-asset-served-from-the-frontend-s-public-assets-and-reference-it-from-the-avail-the-nexus-effect-card",
-      "featureTitle": "Add the user-provided image as a static frontend asset (served from the frontend’s public assets) and reference it from the “AVAIL — The Nexus Effect” card.",
-      "files": [
-        "frontend/src/components/sections/SelectedSignalsSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "http-outcalls@3.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
       ],
       "confidence": "high"
     }

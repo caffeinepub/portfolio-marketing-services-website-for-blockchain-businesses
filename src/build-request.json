@@ -1,85 +1,62 @@
 {
   "kind": "build_request",
-  "title": "Fix incorrect image swap: restore Hero background and update AVAIL — The Nexus Effect image",
+  "title": "Revert application to Draft Version 10 (three drafts earlier)",
   "projectName": "Shailey Portfolio",
-  "priority": "high",
+  "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Restore the website Hero section background image to the original asset (undo the accidental replacement), so the Hero background is no longer the user-provided AVAIL image.",
-      "target": "frontend",
+      "text": "Revert the codebase and deployed app from the current state (App draft Version 13) back to the state from three drafts earlier (App draft Version 10), undoing all changes introduced in drafts 11–13.",
+      "target": "both",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "Instead you have made the blunder of swapping it in the website hero background. Please correct your mistake immediately"
+          "Forget it revert back to three drafts earlier"
         ]
       },
       "acceptanceCriteria": [
-        "HeroSection background image renders as it did before the mistaken swap (i.e., not the user-provided AVAIL image).",
-        "The Hero section still uses the same src path currently referenced in code (frontend/src/components/sections/HeroSection.tsx), but the underlying asset content is restored to the original hero background."
+        "The deployed app reflects the exact UI/behavior of App draft Version 10.",
+        "No functionality or content introduced in drafts 11–13 remains in the reverted build.",
+        "All automated builds/tests (if present) pass after the revert."
       ]
     },
     {
       "id": "REQ-2",
-      "text": "In the “AVAIL — The Nexus Effect” card within the Selected Signals section, replace the currently shown media (X embed/preview) with the user-provided image, and ensure only that AVAIL card is updated (no other sections).",
+      "text": "As part of the revert, restore the website visuals/content affected by the recent image/media changes so they match Draft Version 10 (including the Selected Signals “AVAIL — The Nexus Effect” card media behavior and the Hero section background asset/reference).",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "You were supposed to swap the existing image in AVAIL — The Nexus Effect portion wiht the image provided by me."
+          "Forget it revert back to three drafts earlier"
         ]
       },
       "acceptanceCriteria": [
-        "The “AVAIL — The Nexus Effect” card in frontend/src/components/sections/SelectedSignalsSection.tsx displays the user-provided image.",
-        "The user-provided image does not appear as the Hero background.",
-        "Other Selected Signals cards continue to behave as they did before (no unintended image changes)."
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Add the user-provided image as a static frontend asset (served from the frontend’s public assets) and reference it from the “AVAIL — The Nexus Effect” card.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "swap the existing image in AVAIL — The Nexus Effect portion wiht the image provided by me"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The user-provided image is stored under frontend/public/assets/ (or a subfolder) and is referenced via an absolute public path (e.g., /assets/...).",
-        "No backend changes are required to serve or fetch the image."
+        "The “AVAIL — The Nexus Effect” card media matches how it appeared/behaved in Draft Version 10.",
+        "The Hero section background matches how it appeared/behaved in Draft Version 10.",
+        "No unintended image swap remains anywhere on the site."
       ]
     }
   ],
   "constraints": [
-    "Do not edit any files under frontend/src/components/ui (shadcn UI components are read-only and must be composed, not modified).",
-    "Do not edit immutable hook/bootstrap files: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx."
+    "Do not modify files under frontend/immutablePaths (as defined in SYSTEM_CONTEXT).",
+    "Backend must remain a single-actor Motoko architecture; only introduce migration.mo if a state upgrade is truly required by the revert."
   ],
   "nonGoals": [
-    "Do not redesign the overall site layout or typography.",
-    "Do not change Hero copy, CTAs, or scrolling behavior.",
-    "Do not add new authentication, backend logic, or data storage."
+    "Adding new features or new visual redesign beyond what existed in Draft Version 10.",
+    "Implementing additional image swap logic or new assets unless they were already present in Draft Version 10."
   ],
   "imageRequirements": {
-    "required": [
-      "Dark-themed abstract tech/network illustration (avail-nexus-effect.dim_1600x900.png)"
-    ],
-    "edits": [
-      "Restore the original hero background image content (1.png > 1.png)"
-    ]
+    "required": [],
+    "edits": []
   },
   "userProfileUpdate": {
     "goalsToAdd": [],
     "goalsToRemove": [],
-    "preferencesToAdd": [
-      "Use English for any user-facing text."
-    ],
+    "preferencesToAdd": [],
     "preferencesToRemove": [],
     "miscToAdd": [],
     "miscToRemove": [],

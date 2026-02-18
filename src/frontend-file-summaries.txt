@@ -17,7 +17,7 @@
   "frontend/src/utils/contactMessage.ts": "Utility function to compose formatted contact message text for mailto and clipboard functionality (unchanged).",
   "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks with updated comment reflecting link preview functionality.",
   "frontend/index.html": "HTML entry point with updated title reflecting Shailey Singh's personal brand and strategic GTM positioning.",
-  "frontend/src/components/sections/SelectedSignalsSection.tsx": "Section displaying 6 signal cards with the AVAIL card now showing a static image (avail-nexus-effect.dim_1600x900.png) using ImageOpenInNewTab component instead of X embed, while maintaining link previews for other cards.",
+  "frontend/src/components/sections/SelectedSignalsSection.tsx": "Section displaying 6 signal cards with the AVAIL card showing an embedded X/Twitter post using XPostEmbed component, while maintaining link previews for other cards.",
   "frontend/src/components/sections/WhatIBuildSection.tsx": "Section showcasing 4 capability cards covering Category & Protocol Narrative Architecture, Institutional & Ecosystem GTM Systems, Executive & Capital-Markets Positioning, and AI & Infrastructure Positioning.",
   "frontend/src/components/sections/StrategicTransformationsSection.tsx": "Section displaying 4 transformation case studies (Avail Nexus, Neon EVM, Launch & Partner Systems, Narrative as Acceleration) with detailed descriptions.",
   "frontend/src/components/sections/MarketNotesSection.tsx": "Market Notes section displaying topic list and a continuously scrolling marquee band of writing link previews with CTAs for browsing and subscribing.",
@@ -33,5 +33,5 @@
   "frontend/src/utils/categoryLabels.ts": "Utility module that maps content categories to concise uppercase display labels (AI, ART, TECH, CRYPTO, CULTURE) matching Aurient.ai's category style.",
   "frontend/src/components/ImageOpenInNewTab.tsx": "Reusable component that renders an image wrapped in a link opening in a new tab with proper security attributes (rel=\"noopener noreferrer\") and hover scale effect.",
   "frontend/src/components/sections/SectionHeader.tsx": "Reusable section header component with Aurient-like typography hierarchy supporting title, subtitle, and alignment options for consistent section styling.",
-  "frontend/src/components/XPostEmbed.tsx": "React component that embeds X/Twitter posts using the official Twitter widgets script, now displaying a clickable static image CTA that opens the tweet URL in a new tab instead of text."
+  "frontend/src/components/XPostEmbed.tsx": "React component that embeds X/Twitter posts using the official Twitter widgets script with standard blockquote fallback text while loading."
 }

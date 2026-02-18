@@ -3,39 +3,27 @@
   "projectStateVersion": 3,
   "summary": "New project",
   "architectural_notes": [],
-  "known_issues": [
-    "Image was swapped in the website hero background instead of in the AVAIL — The Nexus Effect section; needs correction (replace Nexus Effect image with user-provided image and restore hero background image)."
-  ],
+  "known_issues": [],
   "isFixRequest": true,
-  "imageRequirements": "## Required Images\n- Dark-themed abstract tech/network illustration (avail-nexus-effect.dim_1600x900.png)\n\n## Edit Images\n- Restore the original hero background image content (1.png > 1.png)",
   "existing_features": [
     {
-      "id": "feature-in-the-avail-the-nexus-effect-card-within-the-selected-signals-section-replace-the-currently-shown-media-x-embed-preview-with-the-user-provided-image-and-ensure-only-that-avail-card-is-updated-no-other-sections",
-      "title": "In the “AVAIL — The Nexus Effect” card within the Selected Signals section, replace the currently shown media (X embed/preview) with the user-provided image, and ensure only that AVAIL card is updated (no other sections).",
+      "id": "feature-revert-the-codebase-and-deployed-app-from-the-current-state-app-draft-version-13-back-to-the-state-from-three-drafts-earlier-app-draft-version-10-undoing-all-changes-introduced-in-drafts-11-13",
+      "title": "Revert the codebase and deployed app from the current state (App draft Version 13) back to the state from three drafts earlier (App draft Version 10), undoing all changes introduced in drafts 11–13.",
       "reqIds": [
-        "REQ-2"
+        "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-add-the-user-provided-image-as-a-static-frontend-asset-served-from-the-frontend-s-public-assets-and-reference-it-from-the-avail-the-nexus-effect-card",
-      "title": "Add the user-provided image as a static frontend asset (served from the frontend’s public assets) and reference it from the “AVAIL — The Nexus Effect” card.",
+      "id": "feature-as-part-of-the-revert-restore-the-website-visuals-content-affected-by-the-recent-image-media-changes-so-they-match-draft-version-10-including-the-selected-signals-avail-the-nexus-effect-card-media-behavior-and-the-hero-section-background-asset-reference",
+      "title": "As part of the revert, restore the website visuals/content affected by the recent image/media changes so they match Draft Version 10 (including the Selected Signals “AVAIL — The Nexus Effect” card media behavior and the Hero section background asset/reference).",
       "reqIds": [
-        "REQ-3"
+        "REQ-2"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Restore the website Hero section background image to the original asset (undo the accidental replacement), so the Hero background is no longer the user-provided AVAIL image.",
-      "reqIds": [
-        "REQ-1"
-      ],
-      "status": "pending"
-    }
-  ],
+  "new_feature_requests": [],
   "projectName": "Shailey Portfolio",
   "clarification_mode": "instant",
   "clarification_rounds": 0

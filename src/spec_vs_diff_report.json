@@ -1,32 +1,52 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-18T05:04:46.629Z",
-  "summary": "REQ-2 is implemented by updating the AVAIL — The Nexus Effect card to render a static image instead of a link preview/embed. REQ-3 is not evidenced because no new static image asset was added under frontend/public/assets. REQ-1 is only partially supported by evidence: HeroSection now points to a hero background image path, but the requirement explicitly called for keeping the same src path in code and restoring the underlying asset content; the diff shows the src path in HeroSection.tsx being modified rather than confirming an asset-content restore.",
+  "generatedAt": "2026-02-18T05:15:32.413Z",
+  "summary": "The diff does not demonstrate a full revert to Draft Version 10. It mainly updates the Selected Signals section to embed an X/Twitter post via a new/modified XPostEmbed component, and updates metadata/summaries. Key revert elements (undoing drafts 11–13 across the codebase, and restoring Hero background/media behavior to Draft 10) are not evidenced in the provided file changes.",
   "missing_requirements": [
     {
       "id": "REQ-1",
-      "requirement": "Hero section still uses the same src path currently referenced in frontend/src/components/sections/HeroSection.tsx, with the underlying asset content restored to the original hero background.",
-      "reason": "The diff shows HeroSection.tsx being modified to use src=\"/assets/generated/hero-bg.dim_1920x1080.png\". This does not demonstrate that the same pre-existing src path was preserved and that only the underlying asset content was restored.",
+      "requirement": "Revert the codebase and deployed app from the current state (App draft Version 13) back to the state from three drafts earlier (App draft Version 10), undoing all changes introduced in drafts 11–13.",
+      "reason": "Only 4 files are shown modified, and the changes shown add/enable X/Twitter embedding behavior rather than broadly reverting code/UI/behavior. The diff provides no evidence that all drafts 11–13 changes were undone across the codebase, nor that the overall UI/behavior matches Draft 10.",
       "evidence": [
-        "frontend/src/components/sections/HeroSection.tsx"
+        "frontend/src/components/sections/SelectedSignalsSection.tsx",
+        "frontend/src/components/XPostEmbed.tsx",
+        "frontend-file-summaries.txt",
+        "project_state.json"
       ]
     },
     {
-      "id": "REQ-3",
-      "requirement": "Add the user-provided image as a static frontend asset under frontend/public/assets/ (or subfolder) and reference it via an absolute public path (e.g., /assets/...).",
-      "reason": "No files were added in the diff (\"Added: 0\"), so there is no evidence that the user-provided image was placed under frontend/public/assets/. Although SelectedSignalsSection references /assets/generated/avail-nexus-effect.dim_1600x900.png, the asset addition itself is not shown.",
+      "id": "REQ-2",
+      "requirement": "Restore the website visuals/content affected by recent image/media changes to match Draft Version 10 (including Selected Signals “AVAIL — The Nexus Effect” card media behavior and the Hero section background asset/reference), with no unintended image swap anywhere.",
+      "reason": "The diff shows the AVAIL card now uses an embedded X/Twitter post (XPostEmbed), which is not evidence of restoring Draft 10 media behavior. No actual change to the Hero section file (or its background asset/reference) is present in the modified-files list; the only mention of Hero restoration appears in a generated summary text file, not as code changes to HeroSection itself.",
       "evidence": [
-        "File diff summary (Added: 0)",
+        "frontend/src/components/sections/SelectedSignalsSection.tsx",
+        "frontend/src/components/XPostEmbed.tsx",
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Embedding an X/Twitter post for the “AVAIL — The Nexus Effect” card via an XPostEmbed component (loading platform.twitter.com/widgets.js and rendering a tweet blockquote).",
+      "reason": "The BuildRequest asks to revert to Draft Version 10 and explicitly lists as a non-goal adding new features or additional media swap logic; the diff implements/uses an X embed feature rather than demonstrating a revert to Draft 10 behavior.",
+      "evidence": [
+        "frontend/src/components/sections/SelectedSignalsSection.tsx",
+        "frontend/src/components/XPostEmbed.tsx"
+      ]
+    },
+    {
+      "description": "Changing Selected Signals card configuration to include showXEmbed/xPostUrl flags and conditional rendering for X embed vs link preview.",
+      "reason": "This is new behavior/configuration visible in the diff and is not requested by the revert requirements; it appears to introduce/maintain post-embed logic rather than revert to prior behavior.",
+      "evidence": [
         "frontend/src/components/sections/SelectedSignalsSection.tsx"
       ]
     }
   ],
-  "hallucinated_features": [],
-  "confidence": 0.66,
+  "confidence": 0.72,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/XPostEmbed.tsx",
     "frontend/src/components/sections/SelectedSignalsSection.tsx",
     "project_state.json"
   ]
