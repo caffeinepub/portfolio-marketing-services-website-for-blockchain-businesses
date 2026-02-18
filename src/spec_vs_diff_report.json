@@ -1,34 +1,33 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-17T13:31:20.176Z",
-  "summary": "REQ-1/REQ-2 appear implemented via new SectionHeader component and updated Selects/Experience section layouts, card styling, and hover behaviors using existing Tailwind tokens. REQ-3 is implemented by rendering concise uppercase category labels via `displayCategory` fields. REQ-4 is partially implemented: images are wired into content and rendered as clickable links opening in a new tab with `rel=\"noopener noreferrer\"`, but the diff summary does not show the actual image assets being added, so reliable production rendering and exact image matching cannot be verified.",
+  "generatedAt": "2026-02-18T05:04:46.629Z",
+  "summary": "REQ-2 is implemented by updating the AVAIL — The Nexus Effect card to render a static image instead of a link preview/embed. REQ-3 is not evidenced because no new static image asset was added under frontend/public/assets. REQ-1 is only partially supported by evidence: HeroSection now points to a hero background image path, but the requirement explicitly called for keeping the same src path in code and restoring the underlying asset content; the diff shows the src path in HeroSection.tsx being modified rather than confirming an asset-content restore.",
   "missing_requirements": [
     {
-      "id": "REQ-4",
-      "requirement": "Add the same images shown in Aurient.ai’s Selects and Experience sections to the corresponding items in this app, and ensure all images render reliably in production builds (no broken images).",
-      "reason": "The content now references image paths under `/assets/aurient/...`, and UI renders them, but the diff summary does not include any added image files (e.g., in `frontend/public/assets/...` or similar). Without the actual assets present, the 'same images' and 'no broken images in production builds' acceptance criteria cannot be confirmed from the diff.",
+      "id": "REQ-1",
+      "requirement": "Hero section still uses the same src path currently referenced in frontend/src/components/sections/HeroSection.tsx, with the underlying asset content restored to the original hero background.",
+      "reason": "The diff shows HeroSection.tsx being modified to use src=\"/assets/generated/hero-bg.dim_1920x1080.png\". This does not demonstrate that the same pre-existing src path was preserved and that only the underlying asset content was restored.",
       "evidence": [
-        "frontend/src/content/aurientSelectsContent.ts (image: \"/assets/aurient/selects/...png\")",
-        "frontend/src/content/aurientExperienceContent.ts (image: \"/assets/aurient/experience/...png\")",
-        "frontend/src/components/sections/SelectsSection.tsx (renders `item.image`)",
-        "frontend/src/components/sections/ExperienceSection.tsx (renders `item.image`)"
+        "frontend/src/components/sections/HeroSection.tsx"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "requirement": "Add the user-provided image as a static frontend asset under frontend/public/assets/ (or subfolder) and reference it via an absolute public path (e.g., /assets/...).",
+      "reason": "No files were added in the diff (\"Added: 0\"), so there is no evidence that the user-provided image was placed under frontend/public/assets/. Although SelectedSignalsSection references /assets/generated/avail-nexus-effect.dim_1600x900.png, the asset addition itself is not shown.",
+      "evidence": [
+        "File diff summary (Added: 0)",
+        "frontend/src/components/sections/SelectedSignalsSection.tsx"
       ]
     }
   ],
   "hallucinated_features": [],
-  "confidence": 0.74,
+  "confidence": 0.66,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/ImageOpenInNewTab.tsx",
-    "frontend/src/components/sections/ExperienceSection.tsx",
-    "frontend/src/components/sections/SectionHeader.tsx",
-    "frontend/src/components/sections/SelectsSection.tsx",
-    "frontend/src/content/aurientExperienceContent.ts",
-    "frontend/src/content/aurientSelectsContent.ts",
-    "frontend/src/index.css",
-    "frontend/src/utils/categoryLabels.ts",
-    "frontend/tailwind.config.js",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/SelectedSignalsSection.tsx",
     "project_state.json"
   ]
 }

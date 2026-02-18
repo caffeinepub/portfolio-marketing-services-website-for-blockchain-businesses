@@ -2,14 +2,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
 import LinkPreview from '@/components/LinkPreview';
+import ImageOpenInNewTab from '@/components/ImageOpenInNewTab';
 
 const signals = [
   {
     title: 'AVAIL — The Nexus Effect',
     category: 'Strategic Repositioning',
-    description: 'Repositioning Avail from Data Availability layer to a crosschain coordination infra layer for web3 apps.',
+    description: 'Repositioning Avail from a single product, Data Availability layer, to a crosschain coordination infra layer for web3 apps.',
     link: 'https://availproject.org/nexus',
-    showPreview: true
+    showPreview: false,
+    showImage: true,
+    imageSrc: '/assets/generated/avail-nexus-effect.dim_1600x900.png'
   },
   {
     title: 'NEON EVM — Network Extensions',
@@ -69,6 +72,17 @@ export default function SelectedSignalsSection() {
                 <CardDescription className="text-base">{signal.description}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
+                {/* Static Image - only for AVAIL signal */}
+                {signal.showImage && signal.imageSrc && (
+                  <div className="my-4">
+                    <ImageOpenInNewTab 
+                      src={signal.imageSrc} 
+                      alt={signal.title}
+                      className="rounded-md"
+                    />
+                  </div>
+                )}
+
                 {/* Link Preview - for signals with showPreview enabled */}
                 {signal.showPreview && signal.link.startsWith('https://') && (
                   <LinkPreview url={signal.link} />

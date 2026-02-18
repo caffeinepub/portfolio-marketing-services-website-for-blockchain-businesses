@@ -2,33 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-selects-section-ui-to-more-closely-match-the-styling-and-interaction-patterns-of-the-selects-section-on-https-www-aurient-ai-typography-hierarchy-spacing-card-layout-hover-states-while-keeping-the-app-s-existing-tailwind-theme-tokens-e-g-accent-background-foreground",
-      "featureTitle": "Update the Selects section UI to more closely match the styling and interaction patterns of the Selects section on https://www.aurient.ai/ (typography hierarchy, spacing, card layout, hover states), while keeping the app’s existing Tailwind theme tokens (e.g., accent/background/foreground).",
+      "featureId": "feature-in-the-avail-the-nexus-effect-card-within-the-selected-signals-section-replace-the-currently-shown-media-x-embed-preview-with-the-user-provided-image-and-ensure-only-that-avail-card-is-updated-no-other-sections",
+      "featureTitle": "In the “AVAIL — The Nexus Effect” card within the Selected Signals section, replace the currently shown media (X embed/preview) with the user-provided image, and ensure only that AVAIL card is updated (no other sections).",
       "files": [
-        "frontend/src/components/sections/SectionHeader.tsx",
-        "frontend/src/components/sections/SelectsSection.tsx",
-        "frontend/src/index.css"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "http-outcalls@3.0.0"
-      ],
-      "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-experience-section-ui-to-more-closely-match-the-styling-and-interaction-patterns-of-the-experience-section-on-https-www-aurient-ai-typography-hierarchy-spacing-timeline-card-layout-hover-states-while-keeping-the-app-s-existing-tailwind-theme-tokens-e-g-accent-background-foreground",
-      "featureTitle": "Update the Experience section UI to more closely match the styling and interaction patterns of the Experience section on https://www.aurient.ai/ (typography hierarchy, spacing, timeline/card layout, hover states), while keeping the app’s existing Tailwind theme tokens (e.g., accent/background/foreground).",
-      "files": [
-        "frontend/src/components/sections/ExperienceSection.tsx",
-        "frontend/src/components/sections/SectionHeader.tsx",
-        "frontend/src/index.css"
+        "frontend/src/components/sections/SelectedSignalsSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -44,14 +21,10 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-adjust-selects-and-experience-content-labeling-writing-so-the-visible-category-labeling-style-matches-aurient-ai-s-concise-uppercase-category-labels-ai-art-tech-crypto-culture-use-these-exact-labels-where-categories-are-displayed",
-      "featureTitle": "Adjust Selects and Experience content labeling/writing so the visible category labeling style matches Aurient.ai’s concise, uppercase category labels: AI, ART, TECH, CRYPTO, CULTURE (use these exact labels where categories are displayed).",
+      "featureId": "feature-add-the-user-provided-image-as-a-static-frontend-asset-served-from-the-frontend-s-public-assets-and-reference-it-from-the-avail-the-nexus-effect-card",
+      "featureTitle": "Add the user-provided image as a static frontend asset (served from the frontend’s public assets) and reference it from the “AVAIL — The Nexus Effect” card.",
       "files": [
-        "frontend/src/components/sections/ExperienceSection.tsx",
-        "frontend/src/components/sections/SelectsSection.tsx",
-        "frontend/src/content/aurientExperienceContent.ts",
-        "frontend/src/content/aurientSelectsContent.ts",
-        "frontend/src/utils/categoryLabels.ts"
+        "frontend/src/components/sections/SelectedSignalsSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -63,29 +36,6 @@
       ],
       "testIds": [
         "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-the-same-images-shown-in-aurient-ai-s-selects-and-experience-sections-to-the-corresponding-items-in-this-app-and-ensure-each-image-is-clickable-and-opens-the-image-in-a-new-browser-tab-target-blank-with-rel-noopener-noreferrer",
-      "featureTitle": "Add the same images shown in Aurient.ai’s Selects and Experience sections to the corresponding items in this app, and ensure each image is clickable and opens the image in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\").",
-      "files": [
-        "frontend/src/components/ImageOpenInNewTab.tsx",
-        "frontend/src/components/sections/ExperienceSection.tsx",
-        "frontend/src/components/sections/SelectsSection.tsx",
-        "frontend/src/content/aurientExperienceContent.ts",
-        "frontend/src/content/aurientSelectsContent.ts"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "http-outcalls@3.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
       ],
       "confidence": "high"
     }

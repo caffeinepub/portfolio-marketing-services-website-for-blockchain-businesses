@@ -1,12 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Align the app’s Selects and Experience sections with Aurient.ai’s styling, category label format, and image click behavior while keeping existing Tailwind theme tokens.
+**Goal:** Undo an incorrect image swap by restoring the original Hero background while updating only the “AVAIL — The Nexus Effect” Selected Signals card to use the user-provided image.
 
 **Planned changes:**
-- Update Selects section typography, spacing, card/grid layout, and hover interactions to more closely match Aurient.ai’s Selects section (within existing theme tokens).
-- Update Experience section typography, spacing, timeline/card layout, and hover interactions to more closely match Aurient.ai’s Experience section (within existing theme tokens).
-- Replace displayed category labeling in Selects and Experience with concise uppercase labels: AI, ART, TECH, CRYPTO, CULTURE (and remove longer category strings from the label position).
-- Add/replace Selects and Experience item images to match those shown on Aurient.ai, and make each image open in a new tab with `target="_blank"` and `rel="noopener noreferrer"`.
+- Restore the Hero section background asset content so it matches the original (and is not the AVAIL image), without changing the existing src path referenced in `frontend/src/components/sections/HeroSection.tsx`.
+- Add the user-provided AVAIL image to `frontend/public/assets/` (or a subfolder) and reference it via an absolute public path (`/assets/...`).
+- Update only the “AVAIL — The Nexus Effect” card in `frontend/src/components/sections/SelectedSignalsSection.tsx` to display the user-provided image instead of the current X embed/preview, leaving all other cards unchanged.
 
-**User-visible outcome:** Selects and Experience look and behave more like Aurient.ai, show concise uppercase category labels, and display matching images that open in a new browser tab when clicked.
+**User-visible outcome:** The Hero background looks as it did before the mistaken swap, and the “AVAIL — The Nexus Effect” card shows the provided static image (not an X preview), with no other sections affected.

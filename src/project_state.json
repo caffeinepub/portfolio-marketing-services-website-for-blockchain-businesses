@@ -3,38 +3,25 @@
   "projectStateVersion": 3,
   "summary": "New project",
   "architectural_notes": [],
-  "known_issues": [],
-  "isFixRequest": false,
+  "known_issues": [
+    "Image was swapped in the website hero background instead of in the AVAIL — The Nexus Effect section; needs correction (replace Nexus Effect image with user-provided image and restore hero background image)."
+  ],
+  "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Dark-themed abstract tech/network illustration (avail-nexus-effect.dim_1600x900.png)\n\n## Edit Images\n- Restore the original hero background image content (1.png > 1.png)",
   "existing_features": [
     {
-      "id": "feature-update-the-selects-section-ui-to-more-closely-match-the-styling-and-interaction-patterns-of-the-selects-section-on-https-www-aurient-ai-typography-hierarchy-spacing-card-layout-hover-states-while-keeping-the-app-s-existing-tailwind-theme-tokens-e-g-accent-background-foreground",
-      "title": "Update the Selects section UI to more closely match the styling and interaction patterns of the Selects section on https://www.aurient.ai/ (typography hierarchy, spacing, card layout, hover states), while keeping the app’s existing Tailwind theme tokens (e.g., accent/background/foreground).",
-      "reqIds": [
-        "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-experience-section-ui-to-more-closely-match-the-styling-and-interaction-patterns-of-the-experience-section-on-https-www-aurient-ai-typography-hierarchy-spacing-timeline-card-layout-hover-states-while-keeping-the-app-s-existing-tailwind-theme-tokens-e-g-accent-background-foreground",
-      "title": "Update the Experience section UI to more closely match the styling and interaction patterns of the Experience section on https://www.aurient.ai/ (typography hierarchy, spacing, timeline/card layout, hover states), while keeping the app’s existing Tailwind theme tokens (e.g., accent/background/foreground).",
+      "id": "feature-in-the-avail-the-nexus-effect-card-within-the-selected-signals-section-replace-the-currently-shown-media-x-embed-preview-with-the-user-provided-image-and-ensure-only-that-avail-card-is-updated-no-other-sections",
+      "title": "In the “AVAIL — The Nexus Effect” card within the Selected Signals section, replace the currently shown media (X embed/preview) with the user-provided image, and ensure only that AVAIL card is updated (no other sections).",
       "reqIds": [
         "REQ-2"
       ],
       "version": 1
     },
     {
-      "id": "feature-adjust-selects-and-experience-content-labeling-writing-so-the-visible-category-labeling-style-matches-aurient-ai-s-concise-uppercase-category-labels-ai-art-tech-crypto-culture-use-these-exact-labels-where-categories-are-displayed",
-      "title": "Adjust Selects and Experience content labeling/writing so the visible category labeling style matches Aurient.ai’s concise, uppercase category labels: AI, ART, TECH, CRYPTO, CULTURE (use these exact labels where categories are displayed).",
+      "id": "feature-add-the-user-provided-image-as-a-static-frontend-asset-served-from-the-frontend-s-public-assets-and-reference-it-from-the-avail-the-nexus-effect-card",
+      "title": "Add the user-provided image as a static frontend asset (served from the frontend’s public assets) and reference it from the “AVAIL — The Nexus Effect” card.",
       "reqIds": [
         "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-same-images-shown-in-aurient-ai-s-selects-and-experience-sections-to-the-corresponding-items-in-this-app-and-ensure-each-image-is-clickable-and-opens-the-image-in-a-new-browser-tab-target-blank-with-rel-noopener-noreferrer",
-      "title": "Add the same images shown in Aurient.ai’s Selects and Experience sections to the corresponding items in this app, and ensure each image is clickable and opens the image in a new browser tab (target=\"_blank\" with rel=\"noopener noreferrer\").",
-      "reqIds": [
-        "REQ-4"
       ],
       "version": 1
     }
@@ -42,13 +29,14 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Match the styling of the Selects and Experience sections to aurient.ai, including category labels (AI/ART/TECH/CRYPTO/CULTURE) and images that open in a new tab.",
-      "reqIds": [],
+      "summary": "Restore the website Hero section background image to the original asset (undo the accidental replacement), so the Hero background is no longer the user-provided AVAIL image.",
+      "reqIds": [
+        "REQ-1"
+      ],
       "status": "pending"
     }
   ],
-  "gameProjectType": "none",
-  "projectName": "Aurient Style Sections",
+  "projectName": "Shailey Portfolio",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

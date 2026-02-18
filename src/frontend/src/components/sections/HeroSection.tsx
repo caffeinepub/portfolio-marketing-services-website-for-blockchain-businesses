@@ -32,14 +32,21 @@ export default function HeroSection() {
             <span className="text-accent neon-text">Shailey Singh</span>
           </h1>
 
-          {/* Subheadline */}
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground/90">
-            Strategic GTM & Narrative for Web3, AI & Financial Infrastructure
+          {/* Subheadline - Two Lines */}
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-foreground/90">
+            <span className="block">
+              <span className="font-semibold">Marketing</span>
+              <span className="font-normal"> I </span>
+              <span className="font-semibold">Strategic GTM</span>
+              <span className="font-normal"> I </span>
+              <span className="font-semibold">Narrative Positioning</span>
+            </span>
+            <span className="block mt-2 font-normal text-xl sm:text-2xl md:text-3xl">Blockchain, AI, Digital Assets & Financial Infrastructure</span>
           </h2>
 
           {/* Body Copy */}
           <p className="text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto">
-            I work at the intersection of protocol design, ecosystem, GTM and capital markets narrative helping blockchain, AI, and financial infrastructure products convert technical depth into market clarity, liquidity flows, and institutional trust.
+            Strategic marketing leader driving global GTM, positioning, marketing and growth for digital asset infrastructure, tokenized finance, AI and emerging technology companies. Proven ability to align product, sales and executive narratives to accelerate adoption in markets.
           </p>
 
           {/* CTAs */}
